@@ -4,13 +4,32 @@
             <div class="search">
                 <div class="aBox"><p>搜索饿了么商家、商品的名称</p></div>
             </div>
+            <!-- 轮播图 -->
+            <swiper :bannerData="bannerData"></swiper>
         </div>
     <!-- </page> -->
 </template>
 
 <script>
+import Swiper from '@/components/home/Swiper.vue'
+import {getHomeBannerData} from '@/services/bannerService.js'
 export default {
+    data(){
+       return {
+           bannerData:[]
+       }
+    },
+    components:{
+        Swiper
+    },
+    mounted(){
+        //请求轮播图的数据
+        getHomeBannerData().then(result=>{
 
+            this.bannerData=result;
+            console.log(this.bannerData)
+        })
+    }
 }
 </script>
 
