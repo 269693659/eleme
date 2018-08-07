@@ -7,8 +7,13 @@
 </template>
 
 <script>
+import {getSaleList} from '../../services/indexserver'
 export default {
-
+    counted(){
+         getSaleList().then(result=>{
+            console.log(result,"美食")
+        })
+    }
 }
 </script>
 

@@ -1,16 +1,31 @@
 <template>
     <div class="navList">
         <ul>
-            <li>首页</li>
-            <li>发现</li>
-            <li>订单</li>
-            <li>我的</li>
+            <li v-for="(navitem,i) in navList" :key="i"
+             @click = "changePage(navitem.path)">{{navitem.title}}
+             </li>
+            
         </ul>
     </div>
 </template>
 
 <script>
 export default {
+    data(){
+        return{
+            navList: [
+                {title: '首页', path: '/home'},
+                {title: '发现', path: '/discover'},
+                {title: '订单', path: '/indent'},
+                {title: '我的', path: '/mine'},
+            ]
+        }
+    },
+    methods:{
+         changePage(path){
+            this.$router.push(path);
+        }
+    }
 
 }
 </script>
