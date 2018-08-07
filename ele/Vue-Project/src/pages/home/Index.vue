@@ -4,17 +4,24 @@
             <div class="search">
                 <div class="aBox"><p>搜索饿了么商家、商品的名称</p></div>
             </div>
+
+            <!-- 推荐商家 -->
+            <Stops></Stops>
         </div>
     <!-- </page> -->
 </template>
 
 <script>
-export default {
+import Stops from '@/components/common/stops'
 
+export default {
+    components:{
+        Stops
+    }
 }
 </script>
 
-<style>
+<style scoped>
     .search{
         height:51px;
         width:100%;

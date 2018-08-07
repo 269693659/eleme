@@ -1,0 +1,175 @@
+<template>
+    <div class="stops">
+        <div class="pic">
+            <img src="//fuss10.elemecdn.com/1/2a/05f654faecf9388fae8331a2b1b5apng.png?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/">
+        </div>
+        <div class="text">
+            <h3 class="title">
+                <i>品牌</i>
+                <span>1号粥店(钟屋店)</span>
+                <span class="right">保</span>
+                <span class="right">票</span>
+
+            </h3>
+            <div class="grade">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IHgxPSIwJSIgeTE9IjUwJSIgeTI9IjUwJSIgaWQ9ImEiPjxzdG9wIHN0b3AtY29sb3I9IiNGRkRFMDAiIG9mZnNldD0iMCUiLz48c3RvcCBzdG9wLWNvbG9yPSIjRkZCMDAwIiBvZmZzZXQ9IjEwMCUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBkPSJNNTQuMDE3IDguMDcybC0yLjU1MiAxLjU2MWMtLjQ3Ni4yOTEtLjc1OC4wOTYtLjYyNi0uNDU1bC42OTYtMi45MDktMi4yNzMtMS45NDRjLS40MjQtLjM2Mi0uMzI1LS42OTEuMjM5LS43MzZsMi45ODItLjIzN0w1My42My41ODljLjIxMy0uNTE1LjU1Ny0uNTIzLjc3NCAwbDEuMTQ2IDIuNzYzIDIuOTgyLjIzN2MuNTU2LjA0NC42Ny4zNjguMjQuNzM2bC0yLjI3NCAxLjk0NC42OTYgMi45MWMuMTMuNTQyLS4xNDMuNzUtLjYyNi40NTRsLTIuNTUxLTEuNTZ6bS00OCAwTDMuNDY1IDkuNjMzYy0uNDc2LjI5MS0uNzU4LjA5Ni0uNjI2LS40NTVsLjY5Ni0yLjkwOS0yLjI3My0xLjk0NGMtLjQyNC0uMzYyLS4zMjUtLjY5MS4yMzktLjczNmwyLjk4Mi0uMjM3TDUuNjMuNTg5Yy4yMTMtLjUxNS41NTctLjUyMy43NzQgMEw3LjU1IDMuMzUybDIuOTgyLjIzN2MuNTU2LjA0NC42Ny4zNjguMjQuNzM2TDguNDk3IDYuMjY5bC42OTYgMi45MWMuMTMuNTQyLS4xNDMuNzUtLjYyNi40NTRsLTIuNTUxLTEuNTZ6bTEyIDBsLTIuNTUyIDEuNTYxYy0uNDc2LjI5MS0uNzU4LjA5Ni0uNjI2LS40NTVsLjY5Ni0yLjkwOS0yLjI3My0xLjk0NGMtLjQyNC0uMzYyLS4zMjUtLjY5MS4yMzktLjczNmwyLjk4Mi0uMjM3TDE3LjYzLjU4OWMuMjEzLS41MTUuNTU3LS41MjMuNzc0IDBsMS4xNDYgMi43NjMgMi45ODIuMjM3Yy41NTYuMDQ0LjY3LjM2OC4yNC43MzZsLTIuMjc0IDEuOTQ0LjY5NiAyLjkxYy4xMy41NDItLjE0My43NS0uNjI2LjQ1NGwtMi41NTEtMS41NnptMTIgMGwtMi41NTIgMS41NjFjLS40NzYuMjkxLS43NTguMDk2LS42MjYtLjQ1NWwuNjk2LTIuOTA5LTIuMjczLTEuOTQ0Yy0uNDI0LS4zNjItLjMyNS0uNjkxLjIzOS0uNzM2bDIuOTgyLS4yMzdMMjkuNjMuNTg5Yy4yMTMtLjUxNS41NTctLjUyMy43NzQgMGwxLjE0NiAyLjc2MyAyLjk4Mi4yMzdjLjU1Ni4wNDQuNjcuMzY4LjI0LjczNmwtMi4yNzQgMS45NDQuNjk2IDIuOTFjLjEzLjU0Mi0uMTQzLjc1LS42MjYuNDU0bC0yLjU1MS0xLjU2em0xMiAwbC0yLjU1MiAxLjU2MWMtLjQ3Ni4yOTEtLjc1OC4wOTYtLjYyNi0uNDU1bC42OTYtMi45MDktMi4yNzMtMS45NDRjLS40MjQtLjM2Mi0uMzI1LS42OTEuMjM5LS43MzZsMi45ODItLjIzN0w0MS42My41ODljLjIxMy0uNTE1LjU1Ny0uNTIzLjc3NCAwbDEuMTQ2IDIuNzYzIDIuOTgyLjIzN2MuNTU2LjA0NC42Ny4zNjguMjQuNzM2bC0yLjI3NCAxLjk0NC42OTYgMi45MWMuMTMuNTQyLS4xNDMuNzUtLjYyNi40NTRsLTIuNTUxLTEuNTZ6IiBmaWxsPSJ1cmwoI2EpIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=">
+                <span>4.6</span>
+                <span>月售1448单</span>
+                <span class="right">
+                   蜂鸟专送 
+                </span>
+            </div>
+            <div class="money">
+                <span>￥18起送</span>
+                <span>配送费￥5.5</span>
+                <span class="right">3.75km</span>
+                <span class="right">45分钟</span>
+            </div>
+
+            <div class="type">
+                <span class="bor">披萨意面</span>
+                <span class="bor">品质联盟</span>
+                <img src="//fuss10.elemecdn.com/a/c1/24c767ffa7fd296d3e2d6f01798c6png.png?imageMogr/format/webp/thumbnail/!20x20r/gravity/Center/crop/20x20/">
+                <span class="moods">口碑人气好店</span>
+            </div>
+
+            <div class="active">
+                <span class="one">首</span>
+                <span class="text">新用户下单立减17元</span>
+
+                <div class="activenum">
+                    <span class="right">4个活动</span>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSIjOTk5IiBkPSJNNC41NzcgNS40MjNjLjc5Ljc3IDIuMDczLjc2NyAyLjg1NyAwbDQuMTItNC4wMjZDMTIuMzQ1LjYyNSAxMi4wOSAwIDEwLjk4NSAwSDEuMDI3Qy0uMDc3IDAtLjMzLjYzLjQ1NyAxLjM5N2w0LjEyIDQuMDI2eiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+">
+                </div>
+                
+                <br/>
+                <span class="two">减</span>
+                <span class="text">新用户下单立减17元</span>
+            </div>
+            
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style scoped>
+    .stops{
+        display: flex;
+        padding: 15px 10px;
+        border-bottom: 1px solid rgb(238, 238, 238)
+    }
+    .pic{
+        width: 65px;
+        height: 65px;
+        /* background: red; */
+        border: 1px solid rgb(238, 238, 238)
+    }
+    .pic img{
+        width: 100%
+    }
+    .text{
+        flex:1;
+        margin-left: 10px;
+    }
+    .title i{
+        font-style:normal;
+        font-size: 10px;
+        background: #ffe339;
+        color: #6f3f15;
+        padding: 2px
+    }
+    .title .right{
+        float: right;
+        color: #999;
+        font-size: 12px;
+        font-weight: normal;
+        margin-left: 2px;
+        border: 1px solid rgb(238, 238, 238)
+       
+    }
+    .money .right{
+        float: right;
+        color: #999;
+        font-size: 12px;
+        font-weight: normal;
+        margin-left: 2px;
+    }
+    .grade{
+        margin: 6px 0;
+    }
+    .grade .right{
+        background: #0af;
+        color: #fff;
+        font-size: 12px;
+        float: right;
+    }
+    .grade img{
+        display: inline-block;
+    }
+    .grade span{
+        font-size: 12px;
+        color: #666
+    }
+    .money{
+        font-size: 12px;
+        color: #666
+    }
+    .type{
+        font-size: 12px;
+        color: #666;
+        margin: 14px 0;
+    }
+    .type img{
+        display: inline-block;
+        width: 10px;
+        margin-left:4px 
+        
+    }
+    .type .bor{
+        border: 1px solid rgb(238, 238, 238);
+        padding:1px
+    }
+    .type .moods{
+        color: #e8470b
+    }
+    .active{
+        font-size: 12px;
+        line-height: 20px
+    }
+    .active .one{
+       
+        color:#fff;
+        background:rgb(112, 188, 70);
+        border-radius: 3px;
+        padding: 0 1px;
+    }
+    
+    .active .two{
+        
+        color:#fff;        
+        background: rgb(240, 115, 115);
+        border-radius: 3px;
+        padding: 0 1px;
+
+
+    }
+    .active .text{
+       
+        color: #666
+    }
+    .active img{
+        display: inline-block;
+        width: 7px;
+        position: relative;
+        bottom: 5px
+    }
+    .active .activenum{
+        color: #999;
+        float: right
+    }
+</style>
