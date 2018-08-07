@@ -1,18 +1,7 @@
 <template>
     <!-- <page id="mine"> -->
         <div>
-            我的
-            我的
-            我的
-            我的
-            我的
-
-            我的
-            我的
-            我的
-
-            我的
-            我的
+           <img scr="../../../static/img.tou.png">
         </div>
     <!-- </page> -->
 </template>
