@@ -17,6 +17,15 @@
 import Swiper from '@/components/home/Swiper.vue'
 import Stops from '@/components/common/stops'
 import {getHomeBannerData} from '@/services/bannerService.js'
+import {
+  getRestaurantLocation,
+  getAddressLocation,
+  getSwiperList,
+  getAttributeLocation,
+  getSortList
+} from "../../services/indexserver";
+import { getSaleList } from "../../services/discoverserver";
+
 export default {
     data(){
        return {
@@ -27,14 +36,33 @@ export default {
         Swiper,
         Stops
     },
-    mounted(){
-        //请求轮播图的数据
-        getHomeBannerData().then(result=>{
+ 
+    mounted() {
+    //请求轮播图的数据
 
-            this.bannerData=result;
-            console.log(this.bannerData)
-        })
-    }
+    getHomeBannerData().then(result=>{
+
+        this.bannerData=result;
+        console.log(this.bannerData)
+    })
+
+    // 请求轮播图的数据
+    getRestaurantLocation().then(result => {
+      console.log(result, "饭店信息");
+    });
+    getAddressLocation().then(result => {
+      console.log(result, "本地地址");
+    });
+    getAttributeLocation().then(result => {
+      console.log(result, "小属性");
+    });
+    getSortList().then(result => {
+      console.log(result, "排序");
+    });
+    getSaleList().then(result => {
+      console.log(result, "美食");
+    });
+  }
 }
 </script>
 
@@ -56,5 +84,6 @@ export default {
         line-height:36px;
         color:#ccc;
     }
+
 
 </style>

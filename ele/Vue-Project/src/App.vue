@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import AppHeader from "@/components/common/home/AppHeader";
-import AppNav from "@/components/common/home/AppNav";
+import AppHeader from "@/components/common/AppHeader";
+import AppNav from "@/components/common/AppNav";
 export default {
   name: "App",
   components: {
