@@ -6,12 +6,16 @@
             </div>
             <!-- 轮播图 -->
             <swiper :bannerData="bannerData"></swiper>
+
+            <!-- 推荐商家 -->
+            <Stops></Stops>
         </div>
     <!-- </page> -->
 </template>
 
 <script>
 import Swiper from '@/components/home/Swiper.vue'
+import Stops from '@/components/common/stops'
 import {getHomeBannerData} from '@/services/bannerService.js'
 export default {
     data(){
@@ -20,7 +24,8 @@ export default {
        }
     },
     components:{
-        Swiper
+        Swiper,
+        Stops
     },
     mounted(){
         //请求轮播图的数据
@@ -33,7 +38,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     .search{
         height:51px;
         width:100%;
