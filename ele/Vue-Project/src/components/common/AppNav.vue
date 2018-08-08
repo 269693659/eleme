@@ -61,6 +61,7 @@ export default {
     }
     .navList ul li{
         width:25%;
+        font-size:12px;
         text-align:center;
         line-height:44px;
     }

@@ -61,10 +61,10 @@ export default {
     //   console.log(result, "本地地址");
     });
     getAttributeLocation().then(result => {
-      console.log(result, "小属性");
+    //   console.log(result, "小属性");
     });
     getSortList().then(result => {
-      console.log(result, "排序");
+    //   console.log(result, "排序");
     });
     getSaleList().then(result => {
     //   console.log(result, "美食");

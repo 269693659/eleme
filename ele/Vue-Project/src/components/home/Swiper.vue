@@ -31,8 +31,9 @@ export default {
         this.bannerSwiper=new Swiper(this.$refs.banner,{
             loop:true,
             pagination: '.swiper-pagination',
+            paginationClickable :true
         })
-        console.log(this.bannerData);
+        // console.log(this.bannerData);
         
     },
     updated() {
@@ -48,6 +49,9 @@ export default {
 </script>
 
 <style scoped>
+.swiper-container{
+    background:#fff;
+}
 .box{
     margin-top: 15px;
     width: 20%;
@@ -73,5 +77,7 @@ export default {
     color: #666;
     font-size: 12px;
 }
-
+.swiper-pagination{
+    position: unset;
+}
 </style>

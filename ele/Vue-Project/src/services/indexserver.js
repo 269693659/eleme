@@ -125,14 +125,15 @@ export function getSortList() {
                 terminal: "h5"
             }
         }).then(response => {
-                // console.log(response.data);
-                // let data = response.data.map(item=>{
-                //     return {
-                //         sort: item.inside_sort_filter,
-                //         megList:item.outside_sort_filter
-                //     }
-                // })
-                resolve(response.data);
+                var arr = [];
+                // console.log(response.data.inside_sort_filter);
+                let data = response.data.inside_sort_filter.map(item=>{
+                  arr.push(item.name);
+                  return{
+                      "abc" : arr,
+                  }
+                })
+                resolve(data);
             }) 
             .catch(error => {
                 console.log('getSortList请求失败');

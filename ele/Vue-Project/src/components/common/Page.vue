@@ -25,7 +25,7 @@ export default {
         scroll.on('scroll', ()=>{
             // let disY = scroll.y-scroll.maxScrollY;
             // this.onScroll(disY);
-            console.log(scroll.y)
+            // console.log(scroll.y)
         })
     }
 }

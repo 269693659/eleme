@@ -2,14 +2,18 @@
     <!-- <page id="discover"> -->
         <div class="discover">
             <div class="coverHead">
+                
                 <div class="coverLeft">
+                    <router-link to="/goldstop/1/2">
                     <div class="megs">
                         <p>金币商城</p>
                         <span>
                             0元好物
                         </span>
                     </div>
+                     </router-link>
                 </div>
+               
                 <div class="coverRight">
                     <div class="coverRightTop">
                        <p>推荐有奖</p>

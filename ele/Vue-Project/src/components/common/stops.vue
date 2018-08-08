@@ -84,6 +84,7 @@ export default {
 
 <style scoped>
     .stops{
+        background:#fff;
         display: flex;
         padding: 15px 10px;
         border-bottom: 1px solid rgb(238, 238, 238)

@@ -6,6 +6,7 @@ Vue.use(Router)
 import Discover from '@/pages/discover/Index.vue'
 import Indent from '@/pages/indent/Index.vue'
 import Mine from '@/pages/mine/Index.vue'
+import Gold from '@/pages/discover/Gold.vue' 
 export default new Router({
   routes: [
     {
@@ -17,7 +18,13 @@ export default new Router({
     {
       path:'/discover',
       name:'discover',
-      component:Discover
+      component:Discover,
+      children:[
+        {
+          path:"goldstop/1/2",
+          component:Gold
+        }
+      ]
     },
     {
       path:'/indent',
