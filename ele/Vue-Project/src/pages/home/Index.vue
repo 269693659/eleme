@@ -1,5 +1,5 @@
 <template>
-    <!-- <page id="home"> -->
+    <page id="home">
         <div class="main">
             <div class="search">
                 <div class="aBox"><p>搜索饿了么商家、商品的名称</p></div>
@@ -9,8 +9,12 @@
 
             <!-- 推荐商家 -->
             <Stops></Stops>
+            <Stops></Stops>
+            <Stops></Stops>
+            <Stops></Stops>
+            <Stops></Stops>
         </div>
-    <!-- </page> -->
+    </page>
 </template>
 
 <script>
