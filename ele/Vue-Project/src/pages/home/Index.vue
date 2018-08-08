@@ -5,8 +5,10 @@
                 <div class="aBox"><p>搜索饿了么商家、商品的名称</p></div>
             </div>
             <!-- 轮播图 -->
+            
             <swiper :bannerData="bannerData"></swiper>
-
+            <!-- 排序 -->
+            <Fox></Fox>
             <!-- 推荐商家 -->
             <Stops></Stops>
         </div>
@@ -16,6 +18,7 @@
 <script>
 import Swiper from '@/components/home/Swiper.vue'
 import Stops from '@/components/common/stops'
+import Fox from '@/components/home/fox'
 import {getHomeBannerData} from '@/services/bannerService.js'
 import {
   getRestaurantLocation,
@@ -34,7 +37,8 @@ export default {
     },
     components:{
         Swiper,
-        Stops
+        Stops,
+        Fox
     },
  
     mounted() {
@@ -43,15 +47,15 @@ export default {
     getHomeBannerData().then(result=>{
 
         this.bannerData=result;
-        console.log(this.bannerData)
+        // console.log(this.bannerData)
     })
 
     // 请求轮播图的数据
     getRestaurantLocation().then(result => {
-      console.log(result, "饭店信息");
+    //   console.log(result, "饭店信息");
     });
     getAddressLocation().then(result => {
-      console.log(result, "本地地址");
+    //   console.log(result, "本地地址");
     });
     getAttributeLocation().then(result => {
       console.log(result, "小属性");
@@ -60,7 +64,7 @@ export default {
       console.log(result, "排序");
     });
     getSaleList().then(result => {
-      console.log(result, "美食");
+    //   console.log(result, "美食");
     });
   }
 }
