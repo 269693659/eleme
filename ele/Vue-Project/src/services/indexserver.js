@@ -94,9 +94,9 @@ export function getAttributeLocation() {
     return new Promise((resolve, reject) => {
         axios.get(API.ATTRIBUTE_SMALL_API, {
             params: {
-                latitude: 22.53199,
-                longitude: 114.11768,
-                terminal: "h5"
+                latitude:22.626024,
+                longitude:113.837884,
+                terminal:"h5"
             }
         })
             .then(response => {
@@ -107,7 +107,8 @@ export function getAttributeLocation() {
                 //         imageUrl: item.imageUrl
                 //     }
                 // })
-                resolve(response.data);
+                let data = response;
+                resolve(data);
             })
             .catch(error => {
                 console.log('getAttributeLocation请求失败');
@@ -123,19 +124,18 @@ export function getSortList() {
                 longitude: 114.11768,
                 terminal: "h5"
             }
-        })
-            .then(response => {
-                // console.log(response);
-                // let data = response.data.data.billboards.map(item=>{
+        }).then(response => {
+                // console.log(response.data);
+                // let data = response.data.map(item=>{
                 //     return {
-                //         id: item.id,
-                //         imageUrl: item.imageUrl
+                //         sort: item.inside_sort_filter,
+                //         megList:item.outside_sort_filter
                 //     }
                 // })
                 resolve(response.data);
-            })
+            }) 
             .catch(error => {
-                console.log('getAttributeLocation请求失败');
+                console.log('getSortList请求失败');
             })
     })
 }
