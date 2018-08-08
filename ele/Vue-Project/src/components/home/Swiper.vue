@@ -3,7 +3,7 @@
     <div class="swiper-wrapper"> 
         <div class="swiper-slide" v-for="(item,index) in bannerData" :key="index">
             
-            <div v-for="(value,index) in item" :key="index" class="box">
+            <div v-for="(value,index) in item" :key="index" class="box" @click="goPage(value)">
                 <div class="box-img">
                     <img :src="value.image_hash">
                 </div>
@@ -26,13 +26,17 @@ export default {
             
         }
     },
+    methods:{
+        goPage(value){
+            console.log(value);
+        }
+    },
     mounted(){
         //创建bannerSwiper对象
         this.bannerSwiper=new Swiper(this.$refs.banner,{
             loop:true,
             pagination: '.swiper-pagination',
-        })
-        console.log(this.bannerData);
+        }) 
         
     },
     updated() {
@@ -73,5 +77,4 @@ export default {
     color: #666;
     font-size: 12px;
 }
-
 </style>

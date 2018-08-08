@@ -2,9 +2,8 @@
     <div class="navList">
         <ul>
             <li v-for="(navitem,i) in navList" :key="i"
-             @click = "changePage(navitem.path)">{{navitem.title}}
-             </li>
-            
+             @click = "changePage(navitem)">{{navitem.title}}
+            </li>
         </ul>
     </div>
 </template>
@@ -18,12 +17,14 @@ export default {
                 {title: '发现', path: '/discover'},
                 {title: '订单', path: '/indent'},
                 {title: '我的', path: '/mine'},
-            ]
+            ],
+           
         }
     },
     methods:{
-         changePage(path){
-            this.$router.push(path);
+         changePage(item){
+            this.$router.push(item.path);
+            
         }
     }
 
@@ -48,5 +49,10 @@ export default {
         width:25%;
         text-align:center;
         line-height:44px;
+        color: #8e8e93;
+        font-size: 12px;
+    }
+    .navList ul li.active{
+        color: #0089dc;
     }
 </style>

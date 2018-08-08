@@ -11,18 +11,12 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-<<<<<<< HEAD
-      //https://h5.ele.me/restapi/shopping/openapi/entries?
-      '/restapi':{
-        target:'https://h5.ele.me',
-=======
       '/restapi': {
         target: 'https://h5.ele.me',
         changeOrigin: true
       },
       '/':{
         target:'https://fuss10.elemecdn.com',
->>>>>>> 42eb579c572cedaf7b099a80b770644eb4052bee
         changeOrigin:true
       }
     },

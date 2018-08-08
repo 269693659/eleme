@@ -6,6 +6,7 @@ Vue.use(Router)
 import Discover from '@/pages/discover/Index.vue'
 import Indent from '@/pages/indent/Index.vue'
 import Mine from '@/pages/mine/Index.vue'
+import Search from '@/pages/search/Search.vue'
 export default new Router({
   routes: [
     {
@@ -28,6 +29,11 @@ export default new Router({
       path:'/mine',
       name:'mine',
       component:Mine
+    },
+    {
+      path:'/search',
+      name:'search',
+      component:Search
     }
   ]
 

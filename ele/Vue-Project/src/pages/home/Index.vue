@@ -1,12 +1,11 @@
 <template>
     <!-- <page id="home"> -->
         <div class="main">
-            <div class="search">
+            <div class="search" @click="goSearchPage()">
                 <div class="aBox"><p>搜索饿了么商家、商品的名称</p></div>
             </div>
             <!-- 轮播图 -->
             <swiper :bannerData="bannerData"></swiper>
-
             <!-- 推荐商家 -->
             <Stops></Stops>
         </div>
@@ -23,8 +22,8 @@ import {
   getSwiperList,
   getAttributeLocation,
   getSortList
-} from "../../services/indexserver";
-import { getSaleList } from "../../services/discoverserver";
+} from "@/services/indexserver";
+import { getSaleList } from "@/services/discoverserver";
 
 export default {
     data(){
@@ -36,17 +35,19 @@ export default {
         Swiper,
         Stops
     },
- 
+    methods:{
+        goSearchPage(){
+            this.$router.push({
+                path:'/search'
+            })
+        }
+    },
     mounted() {
     //请求轮播图的数据
-
     getHomeBannerData().then(result=>{
 
         this.bannerData=result;
-        console.log(this.bannerData)
     })
-
-    // 请求轮播图的数据
     getRestaurantLocation().then(result => {
       console.log(result, "饭店信息");
     });
