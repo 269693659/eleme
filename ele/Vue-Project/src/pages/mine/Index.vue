@@ -11,23 +11,26 @@
                 </div>   
             </div>         
             <ul class="countList">
-                <li>
-                    <span>钱包</span>
-                    </li>
-                <li>红包</li>
-                <li>金币</li>
+               
+                <li><p><i class="iconfont icon-qianbao" style="font-size:25px"/></p>钱包</li>
+             
+                <li><p><i class="iconfont icon-hongbao" style="font-size:25px"/></p>红包</li>
+               
+                <li><p><i class="iconfont icon-icon-test" style="font-size:25px"/></p>金币</li>
             </ul>
+            <span class="end">
             <div class="address">
-                <p>我的地址</p>
+                <p><i class="iconfont icon-position"/>我的地址</p>
             </div>
             <div class="gold">
-                <p>金币商城</p>
-                <p>分享拿5元红包</p>
+                <p><i class="iconfont icon-shangcheng"/>金币商城</p>
+                <p><i class="iconfont icon-qianbao"/>分享拿5元红包</p>
             </div>
             <div class="service">
-                <p>我的客服</p>
-                <p>下载饿了么APP</p>
+                <p><i class="iconfont icon-linedesign-20"/>我的客服</p>
+                <p class="moey"><i class="iconfont icon-changyonglogo40" style="font-size:25px"/>下载饿了么APP</p>
             </div>
+            </span>
         </div>
     <!-- </page> -->
 </template>
@@ -83,16 +86,15 @@ export default {};
     justify-content:space-between;
     flex-wrap:nowrap;
 }
-.countList li p:nth-child(1){
-    line-height:40px;
-}
-.icon-qianbao{
-    color:orange;
+.countList li p{
+    color:red;
+    line-height: 70px;
+
 }
 .countList li{
     flex: 1;
     text-align:center;
-    line-height: 83px;
+    line-height: 1px;
 }
 .countList li:nth-child(2){
     box-sizing: border-box;
@@ -101,7 +103,7 @@ export default {};
 
 }
 .address,.gold,.service{
-    padding-left:40px;
+    padding-left:15px;
     box-sizing:border-box;
     margin:8px 0;
     background:#fff;
@@ -110,6 +112,16 @@ export default {};
     border-top:1px solid #ddd;
     border-bottom:1px solid #ddd;
 
+}
+.address i,.gold i,.service i{
+    color:blue;
+    margin-right:8px;
+}
+/* .service .moey i{
+    padding-right:18px;
+} */
+.service .moey i{
+    color:rgb(60, 171, 255);
 }
 .address{
         height:44px;

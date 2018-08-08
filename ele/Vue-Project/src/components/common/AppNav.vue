@@ -2,9 +2,10 @@
     <div class="navList">
         <ul>
             <li v-for="(navitem,i) in navList" :key="i"
-             @click = "changePage(navitem.path,navitem.title)">{{navitem.title}}
-             </li>
+             @click = "changePage(navitem.path,navitem.title)"> <p><i :class="navitem.picture"></i></p> {{navitem.title}}
             
+             </li>
+           
         </ul>
     </div>
 </template>
@@ -15,10 +16,10 @@ export default {
         return{
             isShow: false,
             navList: [
-                {title: '首页', path: '/home'},
-                {title: '发现', path: '/discover'},
-                {title: '订单', path: '/indent'},
-                {title: '我的', path: '/mine'},
+                {title: '首页', path: '/home', picture:['iconfont','icon-changyonglogo40','box']},
+                {title: '发现', path: '/discover', picture:['iconfont','icon-faxian']},
+                {title: '订单', path: '/indent', picture:['iconfont','icon-dingdan']},
+                {title: '我的', path: '/mine', picture:['iconfont','icon-wode']},
             ],
             meg:null
         }
@@ -63,6 +64,18 @@ export default {
         width:25%;
         font-size:12px;
         text-align:center;
-        line-height:44px;
+       
+        font-size: 12px;
     }
+    .navList ul p{
+       line-height:10px;
+       padding-top:11px;
+       
+    }
+    .navList ul p .box{
+       font-size: 25px;
+       color:rgb(60, 171, 255);
+       
+    }
+    
 </style>
