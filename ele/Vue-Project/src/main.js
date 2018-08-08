@@ -3,7 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import Vuex from 'vuex'
+Vue.use(Vuex)
+Vue.prototype.$center = new Vue();
 Vue.config.productionTip = false
 
 import Page from '@/components/common/Page'

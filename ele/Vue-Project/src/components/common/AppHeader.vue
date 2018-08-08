@@ -1,20 +1,39 @@
 <template>
-    <div class="header">头部</div>
+    <div class="header"><p>{{tip}}</p></div>
 </template>
 
 <script>
 export default {
-
-}
+  data() {
+    return {
+      tip:"定位"
+    };
+  },
+  watch:{
+  },
+  mounted() {
+     this.$center.$on('show-nav',title=>{
+         this.tip = title;
+     });
+  }
+};
 </script>
 
 <style>
-    .header{
-        height:44px;
-        width:100%;
-        background:#0af;
-        position: absolute;
-        top:0;
-        left:0;
-    }
+.header {
+  height: 44px;
+  line-height:44px;
+  text-align:center;
+  width: 100%;
+  background: #0af;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:10;
+}
+.header p{
+  color:#fff;
+  font-size:18px;
+  font-weight:bold;
+}
 </style>

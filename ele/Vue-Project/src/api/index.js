@@ -59,6 +59,10 @@ attribute属性
 latitude=22.53199
 longitude=114.11768
 terminal=h5
+西部硅谷
+latitude=22.626024
+longitude=113.837884
+terminal=h5
 */ 
 const ATTRIBUTE_SMALL_API = "/restapi/shopping/v1/restaurants/filter-bar/attributes";
 
