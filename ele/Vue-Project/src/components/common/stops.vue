@@ -61,7 +61,8 @@ export default {
     .stops{
         display: flex;
         padding: 15px 10px;
-        border-bottom: 1px solid rgb(238, 238, 238)
+        border-bottom: 1px solid rgb(238, 238, 238);
+        background: #fff;
     }
     .pic{
         width: 65px;
