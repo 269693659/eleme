@@ -221,6 +221,9 @@ export default {};
 .index-1qvN6_0, .index-1DFa7_0{
     color:red;
 }
+.index-1y1Q5_0{
+    padding-top:20px;
+}
 .index-1y1Q5_0 img{
     width:120px;
     height:80px;
