@@ -9,10 +9,6 @@
 
             <!-- 推荐商家 -->
             <Stops></Stops>
-            <Stops></Stops>
-            <Stops></Stops>
-            <Stops></Stops>
-            <Stops></Stops>
         </div>
     </page>
 </template>
