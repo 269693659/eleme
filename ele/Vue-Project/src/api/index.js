@@ -99,8 +99,15 @@ const SALE_LIST_API ="/restapi/shopping/v1/sale_list_index"
 /*https://fuss10.elemecdn.com/7/d8/a867c870b22bc74c87c348b75528djpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/
 https://fuss10.elemecdn.com/c/7e/76a23eb90dada42528bc41499d6f8jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/
 */
-
-
+/*
+请求热门搜索的数据：
+接口功能：搜索页面的数据请求
+接口参数：
+latitude=22.53199
+longitude=114.11768
+// https://h5.ele.me/restapi/shopping/v3/hot_search_words?latitude=22.547&longitude=114.085947
+*/
+const HOT_SEARCH_API="/restapi/shopping/v3/hot_search_words"
 export default {
     RESTAURANT_LOCATION_API,
     ATTRIBUTE_SMALL_API,
@@ -110,4 +117,5 @@ export default {
     ADDRESS_LOCATION_API,
     SALE_LIST_API,
     HOME_BANNER_API,
+    HOT_SEARCH_API,
 }

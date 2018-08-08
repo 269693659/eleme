@@ -21,7 +21,7 @@ export default {
                 {title: '订单', path: '/indent', picture:['iconfont','icon-dingdan']},
                 {title: '我的', path: '/mine', picture:['iconfont','icon-wode']},
             ],
-            meg:null
+            meg:'nulls'
         }
     },
     created(){
@@ -64,8 +64,6 @@ export default {
         width:25%;
         font-size:12px;
         text-align:center;
-       
-        font-size: 12px;
     }
     .navList ul p{
        line-height:10px;
@@ -74,8 +72,10 @@ export default {
     }
     .navList ul p .box{
        font-size: 25px;
-       color:rgb(60, 171, 255);
-       
+       color:rgb(60, 171, 255);  
+    }
+    .navList ul li.active{
+        color: #0089dc;
     }
     
 </style>

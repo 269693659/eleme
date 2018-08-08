@@ -1,9 +1,8 @@
 <template>
     <div class="swiper-container swiper-container-horizontal" ref="banner">
     <div class="swiper-wrapper"> 
-        <div class="swiper-slide" v-for="(item,index) in bannerData" :key="index">
-            
-            <div v-for="(value,index) in item" :key="index" class="box">
+        <div class="swiper-slide" v-for="(item,index) in bannerData" :key="index"> 
+            <div v-for="(value,index) in item" :key="index" class="box" @click="goPage(value)">
                 <div class="box-img">
                     <img :src="value.image_hash">
                 </div>
@@ -24,6 +23,14 @@ export default {
     data(){
         return {
             
+        }
+    },
+    methods:{
+        goPage(value){
+
+            this.$router.push({
+                path:'/food'
+            })
         }
     },
     mounted(){
