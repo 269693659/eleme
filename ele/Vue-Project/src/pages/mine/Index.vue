@@ -11,8 +11,10 @@
                 </div>   
             </div>         
             <ul class="countList">
-                <li><i class="iconfont icon-qianbao"></i>
-                    钱包</li>
+                <li>
+                    <p><i class="iconfont icon-qianbao"></i></p>
+                    <p>钱包</p>
+                </li>
                 <li>红包</li>
                 <li>金币</li>
             </ul>
@@ -81,6 +83,9 @@ export default {};
     display:flex;
     justify-content:space-between;
     flex-wrap:nowrap;
+}
+.countList li p:nth-child(1){
+    line-height:40px;
 }
 .icon-qianbao{
     color:orange;
