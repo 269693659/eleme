@@ -12,9 +12,8 @@
             </div>         
             <ul class="countList">
                 <li>
-                    <p><i class="iconfont icon-qianbao"></i></p>
-                    <p>钱包</p>
-                </li>
+                    <span>钱包</span>
+                    </li>
                 <li>红包</li>
                 <li>金币</li>
             </ul>
