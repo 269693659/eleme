@@ -98,6 +98,9 @@ export default {
     .shopList ul{
         width:100%;
         height:387px;
+         display:flex;
+        justify-content: space-between;
+        flex-wrap:nowrap;
     }
     .admitime{
         width:100%;
