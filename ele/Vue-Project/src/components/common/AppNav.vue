@@ -2,8 +2,9 @@
     <div class="navList">
         <ul>
             <li v-for="(navitem,i) in navList" :key="i"
-             @click = "changePage(navitem)">{{navitem.title}}
-            </li>
+             @click = "changePage(navitem.path,navitem.title)">{{navitem.title}}
+             </li>
+            
         </ul>
     </div>
 </template>
@@ -12,20 +13,31 @@
 export default {
     data(){
         return{
+            isShow: false,
             navList: [
                 {title: '首页', path: '/home'},
                 {title: '发现', path: '/discover'},
                 {title: '订单', path: '/indent'},
                 {title: '我的', path: '/mine'},
             ],
-           
+            meg:'nulls'
         }
     },
+    created(){
+         
+    },
     methods:{
-         changePage(item){
-            this.$router.push(item.path);
+         changePage(path,title){
+            this.$router.push(path);
+            if(path=='/home'){
+                title="深圳西部硅谷"
+                this.$center.$emit('show-nav',title);
+            }else{
+                this.$center.$emit('show-nav',title);
+            }   
             
         }
+         
     }
 
 }
@@ -35,9 +47,11 @@ export default {
     .navList{
         height:44px;
         width:100%;
-        position: absolute;
+        position: fixed;
         bottom:0;
+        background:#fff;
         left:0;
+        z-index:10
     }
     .navList ul{
         width:100%;

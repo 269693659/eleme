@@ -1,20 +1,27 @@
 <template>
-    <!-- <page id="home"> -->
+    <page id="home">
         <div class="main">
             <div class="search" @click="goSearchPage()">
                 <div class="aBox"><p>搜索饿了么商家、商品的名称</p></div>
             </div>
             <!-- 轮播图 -->
+            
             <swiper :bannerData="bannerData"></swiper>
+            <!-- 排序 -->
+            <Fox></Fox>
             <!-- 推荐商家 -->
             <Stops></Stops>
+            <Stops></Stops>
+            <Stops></Stops>
+            <Stops></Stops>
         </div>
-    <!-- </page> -->
+    </page>
 </template>
 
 <script>
 import Swiper from '@/components/home/Swiper.vue'
 import Stops from '@/components/common/stops'
+import Fox from '@/components/home/fox'
 import {getHomeBannerData} from '@/services/bannerService.js'
 import {
   getRestaurantLocation,
@@ -33,7 +40,8 @@ export default {
     },
     components:{
         Swiper,
-        Stops
+        Stops,
+        Fox
     },
     methods:{
         goSearchPage(){
@@ -49,10 +57,10 @@ export default {
         this.bannerData=result;
     })
     getRestaurantLocation().then(result => {
-      console.log(result, "饭店信息");
+    //   console.log(result, "饭店信息");
     });
     getAddressLocation().then(result => {
-      console.log(result, "本地地址");
+    //   console.log(result, "本地地址");
     });
     getAttributeLocation().then(result => {
       console.log(result, "小属性");
@@ -61,7 +69,7 @@ export default {
       console.log(result, "排序");
     });
     getSaleList().then(result => {
-      console.log(result, "美食");
+    //   console.log(result, "美食");
     });
   }
 }

@@ -2,21 +2,21 @@
      <div class="search">
          <div class="header">
             <button class="backBtn" @click="goHomePage()">返回</button>
-            <input type="text" placeholder="输入商家 商家名称">
-            <button class="searchBtn">搜索</button>
+            <input type="text" placeholder="输入商家 商家名称" v-model="word">
+            <button class="searchBtn" @click="search(word)">搜索</button>
         </div>
         <div class="content">
-            <div class="history">
+            <div class="history" v-if="isShow">
                 <h4>历史搜索</h4>
-                <button class="delBtn">删除</button>
+                <button class="delBtn" @click="delHistory()">删除</button>
                 <ul class="historyList">
-                    <li>奶茶</li>
+                    <li v-for="(item,index) in historyListData" :key="index">{{item}}</li>
                 </ul>
             </div>
             <div class="hot">
                 <h4>热门搜索</h4>
                 <ul class="hotList">
-                    <li v-for="(item,index) in hotSearchData" :key="index">{{item.word}}</li>
+                    <li v-for="(item,index) in hotSearchData" :key="index" @click="wordSearch(item.word)">{{item.word}}</li>
                 </ul>
             </div>
         </div>
@@ -28,15 +28,31 @@ import {getHotSearchData} from '@/services/searchService.js'
 export default {
     data(){
         return{
-            hotSearchData:[]
+            word:'',
+            hotSearchData:[],
+            historyListData:['奶茶','水果'],
+            isShow:true,
         }
     },
     methods:{
+        //跳转到首页
         goHomePage(){
             this.$router.push({
                 path:'/home'
             })
-        }
+        },
+        //搜索事件
+        wordSearch(word){
+            this.word=word;
+            this.historyListData.push(word);
+        },
+        search(word){
+            this.historyListData.push(word);
+        },
+        delHistory(){
+            this.historyListData=[];
+            this.isShow=false;
+        },
     },
     mounted(){
         getHotSearchData().then(result=>{
@@ -50,6 +66,7 @@ export default {
  .search{
      width: 100%;
      height: 100%;
+     background: #fff;
  }
  .header{
      width: 100%;
