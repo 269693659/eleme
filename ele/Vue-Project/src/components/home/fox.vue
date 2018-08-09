@@ -213,6 +213,14 @@ export default {
   background: skyblue;
   margin-right: 20px;
 }
+.index-1y1Q5_0{
+    padding-top:20px;
+}
+.index-1y1Q5_0 img{
+    width:120px;
+    height:80px;
+    float:right;
+}
 .index-Q3GS5_0 {
   width: 170px;
   height: 130px;

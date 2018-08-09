@@ -46,32 +46,7 @@
                 <span class="two">减</span>
                 <span class="text">新用户下单立减17元</span>
             </div>
-            <div class="active">
-                <span class="one">首</span>
-                <span class="text">新用户下单立减17元</span>
-
-                <div class="activenum">
-                    <span class="right">4个活动</span>
-                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSIjOTk5IiBkPSJNNC41NzcgNS40MjNjLjc5Ljc3IDIuMDczLjc2NyAyLjg1NyAwbDQuMTItNC4wMjZDMTIuMzQ1LjYyNSAxMi4wOSAwIDEwLjk4NSAwSDEuMDI3Qy0uMDc3IDAtLjMzLjYzLjQ1NyAxLjM5N2w0LjEyIDQuMDI2eiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+">
-                </div>
-                
-                <br/>
-                <span class="two">减</span>
-                <span class="text">新用户下单立减17元</span>
-            </div><div class="active">
-                <span class="one">首</span>
-                <span class="text">新用户下单立减17元</span>
-
-                <div class="activenum">
-                    <span class="right">4个活动</span>
-                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSIjOTk5IiBkPSJNNC41NzcgNS40MjNjLjc5Ljc3IDIuMDczLjc2NyAyLjg1NyAwbDQuMTItNC4wMjZDMTIuMzQ1LjYyNSAxMi4wOSAwIDEwLjk4NSAwSDEuMDI3Qy0uMDc3IDAtLjMzLjYzLjQ1NyAxLjM5N2w0LjEyIDQuMDI2eiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+">
-                </div>
-                
-                <br/>
-                <span class="two">减</span>
-                <span class="text">新用户下单立减17元</span>
-            </div>
-          
+            
         </div>
     </div>
 </template>
@@ -87,7 +62,8 @@ export default {
         background:#fff;
         display: flex;
         padding: 15px 10px;
-        border-bottom: 1px solid rgb(238, 238, 238)
+        border-bottom: 1px solid rgb(238, 238, 238);
+        background: #fff;
     }
     .pic{
         width: 65px;
