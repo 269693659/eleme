@@ -10,11 +10,19 @@
 
 <script>
 export default {
+    props:{
+        onScroll:Function
+    },
+    methods:{
+        refreshDOM(){
+            this.scroll.refresh()
+        }
+    },
     mounted(){
         let scroll = new IScroll(this.$refs.page, {
             //判断外部是否需要监听正在滚动的位置
-            // probeType: this.onScroll?3:0
-            probeType:3
+            probeType: this.onScroll?3:0
+            
         });
         this.scroll = scroll;
 
@@ -23,9 +31,8 @@ export default {
         })
         
         scroll.on('scroll', ()=>{
-            // let disY = scroll.y-scroll.maxScrollY;
-            // this.onScroll(disY);
-            // console.log(scroll.y)
+            let disY = scroll.y-scroll.maxScrollY;
+            this.onScroll(disY);
         })
     }
 }
@@ -40,5 +47,6 @@ export default {
   bottom: 49px;
   background: #fff;
   overflow: hidden;
+  background: #fff;
 }
 </style>
