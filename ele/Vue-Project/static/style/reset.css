@@ -22,7 +22,7 @@ address,caption,cite,code,dfn,th,var {
     font-style: normal;
     font-weight: normal;
 }
-ul li,ol li{
+ul li,ol li,li{
     list-style: none;
 }
 input {
