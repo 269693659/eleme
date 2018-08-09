@@ -184,3 +184,11 @@ export function getSortList() {
             })
     })
 }
+
+
+/*
+商家详情：
+https://restapi.ele.me/shopping/v2/menu?restaurant_id=1334126
+商家评论：
+https://restapi.ele.me/ugc/v2/restaurants/1334126/ratings/tags
+*/

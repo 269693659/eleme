@@ -16,6 +16,9 @@ export default {
     methods:{
         refreshDOM(){
             this.scroll.refresh()
+        },
+        scrollTop(){
+            this.scroll.scrollTo(0, 0, 200);
         }
     },
     mounted(){
@@ -31,8 +34,10 @@ export default {
         })
         
         scroll.on('scroll', ()=>{
+            // console.log(scroll.y)
             let disY = scroll.y-scroll.maxScrollY;
-            this.onScroll(disY);
+            
+            this.onScroll(disY,scroll.y);
         })
     }
 }
@@ -42,9 +47,9 @@ export default {
 .page{
   width: 100%;
   position: absolute;
-  top: 44px;
+  top: 0px;
   left: 0;
-  bottom: 49px;
+  bottom:49px;
   background: #fff;
   overflow: hidden;
   background: #fff;
