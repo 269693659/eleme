@@ -209,6 +209,6 @@ export default {
     .more p{
         margin-top:-98px;
         margin-left:156px;
-        color:#ccc;
+        color:red;
     }
 </style>
