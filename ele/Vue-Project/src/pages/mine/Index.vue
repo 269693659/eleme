@@ -1,5 +1,6 @@
 <template>
     <!-- <page id="mine"> -->
+<<<<<<< HEAD
         <div class="mine">
             <div class="userhead">
                 <div class="meg">
@@ -29,6 +30,10 @@
                 <p>我的客服</p>
                 <p>下载饿了么APP</p>
             </div>
+=======
+        <div>
+           <img scr="../../../static/img.tou.png">
+>>>>>>> 563e2ae8f6356054764a5630b39b1d4aa92f6b69
         </div>
     <!-- </page> -->
 </template>
