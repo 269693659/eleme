@@ -1,7 +1,7 @@
 <template>
     <page id="home" :onScroll="getScrollY" ref="page">
         <div class="main">
-            <div class="search">
+            <div class="search" @click="goSearchPage()">
                 <div class="aBox"><p>搜索饿了么商家、商品的名称</p></div>
             </div>
             <!-- 轮播图 -->
@@ -23,15 +23,26 @@ import Swiper from '@/components/home/Swiper.vue'
 import Stops from '@/components/common/stops'
 import Fox from '@/components/home/fox'
 //数据
+<<<<<<< HEAD
 import {getHomeBannerData} from '@/services/bannerService.js'
 import { getSaleList } from "../../services/discoverserver";
+=======
+import {getHomeBannerData} from '@/services/bannerService.js';
+import { getSaleList } from "@/services/discoverserver";
+>>>>>>> e928e48e743f84ceebcff2a3dd7fbf9c22e6e83b
 import {
   getRestaurantLocation,
   getAddressLocation,
   getSwiperList,
   getAttributeLocation,
   getSortList
+<<<<<<< HEAD
 } from "../../services/indexserver";
+=======
+
+} from "@/services/indexserver";
+
+>>>>>>> e928e48e743f84ceebcff2a3dd7fbf9c22e6e83b
 
 export default {
     data(){
@@ -49,6 +60,7 @@ export default {
         Stops,
         Fox
     },
+<<<<<<< HEAD
     methods:{
         getScrollY(y){
             if(y<20 && this.canGetLocation){
@@ -99,6 +111,65 @@ export default {
         // getSaleList().then(result => {
         // //   console.log(result, "美食");
 
+=======
+
+    methods:{
+        getScrollY(y){
+            if(y<20 && this.canGetLocation){
+                this.requestRestaurantLocation()
+            }
+        },
+        //再次请求数据
+        requestRestaurantLocation(){
+            this.canGetLocation = false;
+            getRestaurantLocation(this.getAlllimit,this.limit).then(result => {
+                this.stopsData = this.stopsData.concat(result)
+                this.$nextTick(()=>{
+                   
+                    this.$refs.page.refreshDOM()
+                    this.getAlllimit += this.limit
+                    this.canGetLocation = true;
+                })
+                
+            })
+        },
+        //
+        goSearchPage(){
+            this.$router.push({
+                path:'/search'
+            })
+        }
+
+        },
+    mounted() {
+        //请求轮播图的数据
+        getHomeBannerData().then(result=>{
+            this.bannerData = result
+        
+        })
+        
+         // 请求商家的数据
+        getRestaurantLocation(this.offset,this.limit).then(result => {
+            this.stopsData = result;
+            this.getAlllimit += this.limit
+            console.log(this.getAlllimit)
+        })
+   
+        
+
+        // getAddressLocation().then(result => {
+        // //   console.log(result, "本地地址");
+        // });
+        // getAttributeLocation().then(result => {
+        // console.log(result, "小属性");
+        // });
+        // getSortList().then(result => {
+        // console.log(result, "排序");
+        // });
+        // getSaleList().then(result => {
+        // //   console.log(result, "美食");
+
+>>>>>>> e928e48e743f84ceebcff2a3dd7fbf9c22e6e83b
         // });
     }
 }
