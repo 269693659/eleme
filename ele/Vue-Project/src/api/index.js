@@ -108,11 +108,25 @@ longitude=114.11768
 // https://h5.ele.me/restapi/shopping/v3/hot_search_words?latitude=22.547&longitude=114.085947
 */
 const HOT_SEARCH_API="/restapi/shopping/v3/hot_search_words"
-
 /*
-https://home.m.duiba.com.cn?duibaPageId=3&floorId=944&skinId=880&_=1533793771850&callback=jsonp1
+请求food页面的foodlist的数据：
+接口功能：food页面的foodlist数据请求
+接口参数：
+latitude=22.53199
+longitude=114.11768
+entry_id=20004689
+terminal=h5
 */
-// const GOLD_SHOPLIST_API = "/floor/2/0"
+const FOODPAGE_FOODLIST_API='/restapi/shopping/v2/foods_page/sift_factors'
+/*
+请求food页面的foodlist的category的数据：
+接口功能：food页面的foodlist的category数据请求
+接口参数：
+latitude=22.53199
+longitude=114.11768
+*/
+//https://h5.ele.me/restapi/shopping/v2/restaurant/category?latitude=22.533719&longitude=113.936091
+const FOODPAGE_CATEGORY_API='/restapi/shopping/v2/restaurant/category'
 export default {
     RESTAURANT_LOCATION_API,
     ATTRIBUTE_SMALL_API,
@@ -122,5 +136,7 @@ export default {
     ADDRESS_LOCATION_API,
     SALE_LIST_API,
     HOME_BANNER_API,
-    HOT_SEARCH_API
+    HOT_SEARCH_API,
+    FOODPAGE_FOODLIST_API,
+    FOODPAGE_CATEGORY_API
 }
