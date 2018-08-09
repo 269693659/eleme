@@ -8,6 +8,9 @@ Vue.use(Vuex)
 Vue.prototype.$center = new Vue();
 Vue.config.productionTip = false
 
+import Page from '@/components/common/Page'
+Vue.component('page', Page);
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

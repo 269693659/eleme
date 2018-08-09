@@ -1,9 +1,8 @@
 <template>
     <div class="swiper-container swiper-container-horizontal" ref="banner">
     <div class="swiper-wrapper"> 
-        <div class="swiper-slide" v-for="(item,index) in bannerData" :key="index">
-            
-            <div v-for="(value,index) in item" :key="index" class="box">
+        <div class="swiper-slide" v-for="(item,index) in bannerData" :key="index"> 
+            <div v-for="(value,index) in item" :key="index" class="box" @click="goPage(value)">
                 <div class="box-img">
                     <img :src="value.image_hash">
                 </div>
@@ -26,13 +25,22 @@ export default {
             
         }
     },
+    methods:{
+        goPage(value){
+
+            this.$router.push({
+                path:'/food'
+            })
+        }
+    },
     mounted(){
         //创建bannerSwiper对象
         this.bannerSwiper=new Swiper(this.$refs.banner,{
             loop:true,
             pagination: '.swiper-pagination',
+            paginationClickable :true
         })
-        console.log(this.bannerData);
+        // console.log(this.bannerData);
         
     },
     updated() {
@@ -48,6 +56,9 @@ export default {
 </script>
 
 <style scoped>
+.swiper-container{
+    background:#fff;
+}
 .box{
     margin-top: 15px;
     width: 20%;
@@ -73,5 +84,7 @@ export default {
     color: #666;
     font-size: 12px;
 }
-
+.swiper-pagination{
+    position: unset;
+}
 </style>

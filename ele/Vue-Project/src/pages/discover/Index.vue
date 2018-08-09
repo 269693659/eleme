@@ -3,7 +3,9 @@
         <div class="discover">
             <img src="https://fuss10.elemecdn.com/2/9f/cedf0f9959a7e699f81dba18d0aa6gif.gif" class="top-banner">
             <div class="coverHead">
+                
                 <div class="coverLeft">
+                    <router-link to="/goldstop/1/2">
                     <div class="megs">
                         <p>金币商城</p>
                         <span>
@@ -11,7 +13,9 @@
                         </span>
                         <img class="icon" src="https://fuss10.elemecdn.com/8/38/9c9aea0e856149083d84af3444b78jpeg.jpeg?imageMogr/format/webp/">
                     </div>
+                     </router-link>
                 </div>
+               
                 <div class="coverRight">
                     <div class="coverRightTop">
                        <p class="one">推荐有奖</p>
@@ -61,10 +65,10 @@
 </template>
 
 <script>
-import {getSaleList} from '../../services/indexserver'
+import {getSortList} from '@/services/indexserver'
 export default {
     counted(){
-         getSaleList().then(result=>{
+         getSortList().then(result=>{
             console.log(result,"美食")
         })
     }
