@@ -1,24 +1,6 @@
 <template>
     <!-- <page id="home"> -->
         <div class="fox">
-            <section id="activity-lego" class="index-1y1Q5_0">
-                <div class="index-3xB2N_0">
-                    <div class="index-Q3GS5_0">
-                        <h3 class="package">品质套餐</h3>
-                        <div class="index-2W67h_0">搭配齐全吃得好</div>
-                        <div class="index-1DFa7_0">立即抢购 &gt;</div>
-                        <img src="//fuss10.elemecdn.com/d/d4/16ff085900d62b8d60fa7e9c6b65dpng.png?imageMogr/format/webp/thumbnail/!240x160r/gravity/Center/crop/240x160/">
-                    </div>
-                    <div class="index-3OXhZ_0 index-Q3GS5_0">
-                        <h3 class="package">限量抢购</h3>
-                        <div class="index-2W67h_0">超值美味 9.9元起</div>
-                        <div class="index-1DFa7_0"><span>4304人</span>正在抢 &gt;</div>
-                        <img src="//fuss10.elemecdn.com/b/e1/0fa0ed514c093a7138b0b9a50d61fpng.png?imageMogr/format/webp/thumbnail/!240x160r/gravity/Center/crop/240x160/">
-                    </div>
-                </div> 
-            </section>   
-            <!--  -->
-          <div id="shop" class="shop"> 推荐商家</div>
             <ul class="aList">
                          <li @click="asort()">综合排序</li>
                          <li>距离最近</li>
@@ -162,7 +144,7 @@ export default {
       index: 0,
       checked: false,
       ashow: false,
-      isShow:false
+      isShow: false
     };
   },
   methods: {
@@ -176,7 +158,7 @@ export default {
       this.ashow = false;
       this.isShow = false;
     },
-    aShow(){
+    aShow() {
       this.isShow = true;
     }
   },
@@ -189,8 +171,8 @@ export default {
 </script>
 
 <style>
-.fox{
-    background:#fff;
+.fox {
+  background: #fff;
 }
 .act {
   color: skyblue;
@@ -213,30 +195,7 @@ export default {
   background: skyblue;
   margin-right: 20px;
 }
-.index-1y1Q5_0{
-    padding-top:20px;
-}
-.index-1y1Q5_0 img{
-    width:120px;
-    height:80px;
-    float:right;
-}
-.index-Q3GS5_0 {
-  width: 170px;
-  height: 130px;
-  background: #f4f4f4;
-  float: left;
-  margin-left: 10px;
-}
-.package,
-.index-1DFa7_0 {
-  color: red;
-}
-.index-1y1Q5_0 img {
-  width: 120px;
-  height: 80px;
-  float: right;
-}
+
 .shop {
   display: flex;
   width: 100%;
@@ -286,7 +245,7 @@ export default {
   font-size: 14px;
 }
 .filter-sort li {
-  padding-left:15px;
+  padding-left: 15px;
   height: 40px;
   line-height: 40px;
 }

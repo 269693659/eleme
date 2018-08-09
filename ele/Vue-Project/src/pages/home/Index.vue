@@ -8,6 +8,7 @@
             
             <swiper :bannerData="bannerData"></swiper>
             <!-- 排序 -->
+            <ACTIVE></ACTIVE>
             <Fox></Fox>
             <!-- 推荐商家 -->
             <Stops></Stops>
@@ -22,6 +23,7 @@
 import Swiper from '@/components/home/Swiper.vue'
 import Stops from '@/components/common/stops'
 import Fox from '@/components/home/fox'
+import ACTIVE from '@/components/home/activity'
 import {getHomeBannerData} from '@/services/bannerService.js'
 import {
   getRestaurantLocation,
@@ -41,7 +43,8 @@ export default {
     components:{
         Swiper,
         Stops,
-        Fox
+        Fox,
+        ACTIVE
     },
     methods:{
         goSearchPage(){
