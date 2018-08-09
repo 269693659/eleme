@@ -1,6 +1,6 @@
 <template>
     <div class="actives">
-        <section id="activity-lego" class="index-1y1Q5_0">
+        <section class="acts">
                 <div class="index-3xB2N_0">
                     <div class="index-Q3GS5_0">
                         <h3 class="package">品质套餐</h3>
@@ -16,7 +16,6 @@
                     </div>
                 </div> 
             </section>   
-            <!--  -->
           <div id="shop" class="shop"> 推荐商家</div>
     </div>
 </template>
@@ -31,8 +30,8 @@ export default {
 .actives{
     width:100%;
 }
-.index-1y1Q5_0{
-    padding-top:20px;
+.acts{
+    padding-top:4px;
 }
 .index-1y1Q5_0 img{
     width:120px;
