@@ -6,7 +6,8 @@ Vue.use(Router)
 import Discover from '@/pages/discover/Index.vue'
 import Indent from '@/pages/indent/Index.vue'
 import Mine from '@/pages/mine/Index.vue'
-import Gold from '@/pages/discover/Gold.vue' 
+import Gold from '@/components/discover/Gold.vue'
+import Coment from '@/components/discover/Commend.vue'
 import Search from '@/pages/search/Search.vue'
 import Food from '@/pages/food/Food.vue'
 export default new Router({
@@ -21,12 +22,16 @@ export default new Router({
       path:'/discover',
       name:'discover',
       component:Discover,
-      children:[
-        {
-          path:"goldstop/1/2",
-          component:Gold
-        }
-      ]
+    },
+    {
+      path:"/goldstop/1",
+      name:'glod',
+      component:Gold
+    },
+    {
+      path:"/goldstop/2",
+      name:"Coment",
+      component:Coment
     },
     {
       path:'/indent',
@@ -47,6 +52,10 @@ export default new Router({
       path:'/food',
       name:'food',
       component:Food
+    },
+    {
+      path:"**",
+      redirect:'/home'//重定向
     }
   ]
 

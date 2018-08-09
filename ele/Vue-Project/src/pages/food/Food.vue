@@ -3,6 +3,7 @@
         <app-header></app-header>
         <food-list></food-list>
     </div>
+
 </template>
 
 <script>

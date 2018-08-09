@@ -1,7 +1,7 @@
 <template>
-    <!-- <page id="indent"> -->
+    <page id="indent">
         <div>订单</div>
-    <!-- </page> -->
+    </page>
 </template>
 
 <script>
