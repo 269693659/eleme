@@ -3,10 +3,16 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img {
     padding: 0;
     font-size:14px;
 }
+i{
+    font-style: normal;
+}
 html,body{
     width:100%;
     height:100%;
     background-color: #f5f5f5;
+}
+h1,h2,h3,h4,h5,h6,b,i,em{
+    font-style:normal;
 }
 fieldset,img {
     border: 0;
@@ -29,6 +35,7 @@ input {
     padding-top: 0;
     padding-bottom: 0;
     font-family: "SimSun","宋体";
+    outline: none;
 }
 input::-moz-focus-inner {
     border: 0;
@@ -49,4 +56,12 @@ textarea {
 }
 table {
     border-collapse: collapse
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    font-size:0;
 }

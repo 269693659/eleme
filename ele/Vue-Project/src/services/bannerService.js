@@ -25,12 +25,11 @@ export function getHomeBannerData(){
                 terminal:'h5'
             }
         }).then(response=>{
-            console.log('请求成功');
+            //console.log('请求成功');
             let entriesArr=response.data[0].entries;
             let data=[[],[]];
             let str=[];
             entriesArr.map((item,index)=>{
-                // console.log(item.image_hash)
                 str=item.image_hash.split('');
                 str.splice(1,0,'/');
                 str.splice(4,0,'/');

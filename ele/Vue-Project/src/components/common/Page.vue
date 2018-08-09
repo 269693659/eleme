@@ -45,7 +45,7 @@ export default {
   top: 44px;
   left: 0;
   bottom: 49px;
-  background: #ebebeb;
+  background: #fff;
   overflow: hidden;
   background: #fff;
 }
