@@ -15,8 +15,8 @@ module.exports = {
         target: 'https://h5.ele.me',
         changeOrigin: true
       },
-      '/':{
-        target:'https://fuss10.elemecdn.com',
+      '/floor':{
+        target:' https://home.m.duiba.com.cn',
         changeOrigin:true
       }
     },

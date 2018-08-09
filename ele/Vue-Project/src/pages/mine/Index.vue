@@ -1,6 +1,5 @@
 <template>
-    <!-- <page id="mine"> -->
-
+    <page id="mine">
         <div class="mine">
             <div class="userhead">
                 <div class="meg">
@@ -33,7 +32,7 @@
             </div>
             </span>
         </div>
-    <!-- </page> -->
+    </page>
 </template>
 
 <script>

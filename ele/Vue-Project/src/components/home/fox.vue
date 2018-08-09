@@ -291,7 +291,7 @@ export default {
   flex: 0 0 31.33%;
   height: 0.933333rem;
   height: 9.333333vw;
-  font-size: 0.346667rem;
+  font-size: 0.09rem;
   margin: 0.08rem 1%;
   margin: 0.8vw 1%;
   background: #fafafa;
