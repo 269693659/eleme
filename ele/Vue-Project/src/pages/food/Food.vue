@@ -8,6 +8,8 @@
 <script>
 import AppHeader from '@/components/common/AppHeader.vue'
 import FoodList from '@/components/food/FoodList.vue'
+
+
 export default {
     components:{
         AppHeader,

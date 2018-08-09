@@ -57,7 +57,7 @@
                     </li>
                 </ul>
                 <div class="more">
-                    <p>更多</p>
+                    <p>查看更多</p>
                 </div>
             </div>
         </div>
@@ -153,7 +153,7 @@ export default {
     }
     .shopList ul{
         width:100%;
-        height:387px;
+        height:300px;
         display: flex;
         margin-top:25px;
     }
@@ -205,5 +205,10 @@ export default {
            position: absolute;
            top:350px;
            left:120px;
+    }
+    .more p{
+        margin-top:-98px;
+        margin-left:156px;
+        color:red;
     }
 </style>
