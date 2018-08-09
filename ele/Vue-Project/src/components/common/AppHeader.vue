@@ -29,7 +29,7 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  z-index:10;
+  z-index:0;
 }
 .header p{
   color:#fff;
