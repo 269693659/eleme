@@ -3,6 +3,7 @@
         <food-list></food-list>
         <worry-package></worry-package>
     </div>
+
 </template>
 
 <script>

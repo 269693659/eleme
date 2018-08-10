@@ -6,28 +6,39 @@ Vue.use(Router)
 import Discover from '@/pages/discover/Index.vue'
 import Indent from '@/pages/indent/Index.vue'
 import Mine from '@/pages/mine/Index.vue'
-import Gold from '@/pages/discover/Gold.vue' 
+import Gold from '@/components/discover/Gold.vue'
+import Coment from '@/components/discover/Commend.vue'
 import Search from '@/pages/search/Search.vue'
 import Food from '@/pages/food/Food.vue'
 import Ranking from '@/pages/ranking/Index.vue'
+import Sale from '@/pages/home/Sale.vue'
 export default new Router({
   routes: [
     {
       path: '/home',
       name: 'home',
       alias: '/',
-      component: Home
+      component: Home,
+    },
+    {
+      path:'/sale',
+      name:'sale',
+      component:Sale,
     },
     {
       path:'/discover',
       name:'discover',
       component:Discover,
-      children:[
-        {
-          path:"goldstop/1/2",
-          component:Gold
-        }
-      ]
+    },
+    {
+      path:"/goldstop/1",
+      name:'glod',
+      component:Gold
+    },
+    {
+      path:"/goldstop/2",
+      name:"Coment",
+      component:Coment
     },
     {
       path:'/indent',
@@ -52,6 +63,10 @@ export default new Router({
       path:'/ranking',
       name:'ranking',
       component:Ranking
+    },
+    {
+      path:"**",
+      redirect:'/home'//重定向
     }
   ]
 

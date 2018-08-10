@@ -26,10 +26,10 @@ export default {
   text-align:center;
   width: 100%;
   background: #0af;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  z-index:10;
+  z-index:0;
 }
 .header p{
   color:#fff;
