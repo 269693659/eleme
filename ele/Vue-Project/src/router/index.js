@@ -18,19 +18,12 @@ export default new Router({
       name: 'home',
       alias: '/',
       component: Home,
-      children:[
-        {
-          path: 'sale',
-          name: 'sale',
-          component: Sale,
-        }
-      ]
     },
-    // {
-    //   path:'/sale',
-    //   name:'sale',
-    //   component:Sale,
-    // },
+    {
+      path:'/sale',
+      name:'sale',
+      component:Sale,
+    },
     {
       path:'/discover',
       name:'discover',

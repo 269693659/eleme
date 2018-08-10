@@ -2,12 +2,12 @@
     <div class="actives">
         <section class="acts">
                 <div class="index-3xB2N_0">
-                    <div class="trait">
+                    <router-link class="trait" to="/sale">
                         <h3 class="package">品质套餐</h3>
                         <div class="index-2W67h_0">搭配齐全吃得好</div>
                         <div class="index-1DFa7_0">立即抢购 &gt;</div>
                         <img src="//fuss10.elemecdn.com/d/d4/16ff085900d62b8d60fa7e9c6b65dpng.png?imageMogr/format/webp/thumbnail/!240x160r/gravity/Center/crop/240x160/">
-                    </div>
+                    </router-link>
                     <div class="index-3OXhZ_0 trait">
                         <h3 class="package">限量抢购</h3>
                         <div class="index-2W67h_0">超值美味 9.9元起</div>

@@ -85,8 +85,7 @@ export function getSalePageCategoryData() {
             params: {
                 latitude: 22.626435,
                 longitude: 113.838118,
-                type:'quality_meal',
-                // params:'%7B%7D'
+                type:'quality_meal'
             }
         }).then(response => {
             // console.log(response.data.query_list)
@@ -108,12 +107,15 @@ export function getSalePageCategoryData() {
             }
             //遍历输出
             let data = response.data.query_list.map((item, index) => {
-                var minImg = modifyImg(item.foods[0].image_path)
-                var maxImg = modifyImg(item.restaurant.image_path)
+                var maxImg = modifyImg(item.foods[0].image_path)
+                var minImg = modifyImg(item.restaurant.image_path)
                 
                 return {
                     minImg,
                     maxImg,
+                    //全部活动
+                    // allfoods:item.foods,
+                    foods:item.foods.slice(1),
                     //食品名称
                     footname:item.foods[0].name,
                     // 原价
