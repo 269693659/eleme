@@ -90,10 +90,12 @@ terminal=h5
 */
 const FOODS_LIST_API = "/restapi/shopping/openapi/entries";
 
-/*sale_list销售列表
+/*
+sale_list销售列表
 type=quality_meal
 latitude=22.53199
 longitude=114.11768
+params=%7B%7D
 */
 const SALE_LIST_API ="/restapi/shopping/v1/sale_list_index"
 /*https://fuss10.elemecdn.com/7/d8/a867c870b22bc74c87c348b75528djpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/

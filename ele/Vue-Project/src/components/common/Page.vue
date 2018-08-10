@@ -47,7 +47,7 @@ export default {
 .page{
   width: 100%;
   position: absolute;
-  top: 0px;
+  top: 44px;
   left: 0;
   bottom:49px;
   background: #fff;

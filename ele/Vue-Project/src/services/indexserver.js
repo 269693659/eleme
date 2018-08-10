@@ -191,4 +191,10 @@ export function getSortList() {
 https://restapi.ele.me/shopping/v2/menu?restaurant_id=1334126
 商家评论：
 https://restapi.ele.me/ugc/v2/restaurants/1334126/ratings/tags
+
+https://h5.ele.me/msite/food/#search_source=1&activity_id=10016665&navType=0&color_type=1&target_name=%E7%BE%8E%E9%A3%9F&entry_id=20004689&page_type=2&business_flag=1&animation_type=1&restaurant_category_ids=209%2C212%2C213%2C214%2C215%2C216%2C217%2C219%2C265%2C266%2C267%2C268%2C269%2C221%2C222%2C223%2C224%2C225%2C226%2C227%2C228%2C231%2C232%2C263%2C218%2C234%2C235%2C236%2C237%2C238%2C211%2C229%2C230%2C264&geohash=ws0bwqy7d3kj
+https://h5.ele.me/msite/food/#search_source=1&activity_id=10020785&navType=0&color_type=2&target_name=%E6%99%9A%E9%A4%90&entry_id=20008121&page_type=2&business_flag=17&animation_type=1&restaurant_category_ids=209%2C212%2C213%2C214%2C215%2C219%2C265%2C221%2C263%2C218%2C234%2C237%2C240%2C241%2C211%2C229&geohash=ws0bwqy7d3kj
+
+eleme://restaurants?search_source=1&activity_id=10016665&target=%7B%22delivery_mode%22%3A%5B%5D%2C%22category_schema%22%3A%7B%22complex_category_ids%22%3A%5B209%2C212%2C213%2C214%2C215%2C216%2C217%2C219%2C265%2C266%2C267%2C268%2C269%2C221%2C222%2C223%2C224%2C225%2C226%2C227%2C228%2C231%2C232%2C263%2C218%2C234%2C235%2C236%2C237%2C238%2C211%2C229%2C230%2C264%5D%7D%2C%22restaurant_category_id%22%3A%5B209%2C212%2C213%2C214%2C215%2C216%2C217%2C219%2C265%2C266%2C267%2C268%2C269%2C221%2C222%2C223%2C224%2C225%2C226%2C227%2C228%2C231%2C232%2C263%2C218%2C234%2C235%2C236%2C237%2C238%2C211%2C229%2C230%2C264%5D%7D&navType=0&color_type=1&target_name=%E7%BE%8E%E9%A3%9F&entry_id=20004689&page_type=2&business_flag=1&animation_type=1
+eleme://restaurants?search_source=1&activity_id=10020785&target=%7B%22delivery_mode%22%3A%5B%5D%2C%22category_schema%22%3A%7B%22complex_category_ids%22%3A%5B209%2C212%2C213%2C214%2C215%2C219%2C265%2C221%2C263%2C218%2C234%2C237%2C240%2C241%2C211%2C229%5D%7D%2C%22restaurant_category_id%22%3A%5B209%2C212%2C213%2C214%2C215%2C219%2C265%2C221%2C263%2C218%2C234%2C237%2C240%2C241%2C211%2C229%5D%7D&navType=0&color_type=2&target_name=%E6%99%9A%E9%A4%90&entry_id=20008121&page_type=2&business_flag=17&animation_type=1
 */
