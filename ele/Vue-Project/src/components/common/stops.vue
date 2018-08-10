@@ -109,7 +109,6 @@ export default {
             }
         },
            Godetile(){
-            console.log("1111")
              this.$router.push({
                 path:'/godetail/1'
             })

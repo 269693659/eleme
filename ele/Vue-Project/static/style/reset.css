@@ -57,6 +57,11 @@ textarea {
 table {
     border-collapse: collapse
 }
+.flex{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:nowrap;
+  }
 .clearfix:after {
     content: ".";
     display: block;
