@@ -11,14 +11,27 @@ import Food from '@/pages/food/Food.vue'
 import Gold from '@/components/discover/Gold.vue'
 import Coment from '@/components/discover/Commend.vue'
 import Godetail from '@/components/home/godetail.vue'
+import Sale from '@/pages/home/Sale.vue'
 export default new Router({
   routes: [
     {
       path: '/home',
       name: 'home',
       alias: '/',
-      component: Home
+      component: Home,
+      children:[
+        {
+          path: 'sale',
+          name: 'sale',
+          component: Sale,
+        }
+      ]
     },
+    // {
+    //   path:'/sale',
+    //   name:'sale',
+    //   component:Sale,
+    // },
     {
       path:'/discover',
       name:'discover',
