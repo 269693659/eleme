@@ -162,7 +162,7 @@ export default {
       index: 0,
       checked: false,
       ashow: false,
-      isShow:false
+      isShow: false
     };
   },
   methods: {
@@ -176,7 +176,7 @@ export default {
       this.ashow = false;
       this.isShow = false;
     },
-    aShow(){
+    aShow() {
       this.isShow = true;
     }
   },
@@ -189,8 +189,8 @@ export default {
 </script>
 
 <style>
-.fox{
-    background:#fff;
+.fox {
+  background: #fff;
 }
 .act {
   color: skyblue;
@@ -213,13 +213,13 @@ export default {
   background: skyblue;
   margin-right: 20px;
 }
-.index-1y1Q5_0{
-    padding-top:20px;
+.index-1y1Q5_0 {
+  padding-top: 20px;
 }
-.index-1y1Q5_0 img{
-    width:120px;
-    height:80px;
-    float:right;
+.index-1y1Q5_0 img {
+  width: 120px;
+  height: 80px;
+  float: right;
 }
 .index-Q3GS5_0 {
   width: 170px;
@@ -286,7 +286,7 @@ export default {
   font-size: 14px;
 }
 .filter-sort li {
-  padding-left:15px;
+  padding-left: 15px;
   height: 40px;
   line-height: 40px;
 }
