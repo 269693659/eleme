@@ -9,6 +9,7 @@ import Mine from '@/pages/mine/Index.vue'
 import Gold from '@/pages/discover/Gold.vue' 
 import Search from '@/pages/search/Search.vue'
 import Food from '@/pages/food/Food.vue'
+import Ranking from '@/pages/ranking/Index.vue'
 export default new Router({
   routes: [
     {
@@ -47,6 +48,10 @@ export default new Router({
       path:'/food',
       name:'food',
       component:Food
+    },{
+      path:'/ranking',
+      name:'ranking',
+      component:Ranking
     }
   ]
 

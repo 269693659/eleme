@@ -5,7 +5,6 @@
                 <div class="aBox"><p>搜索饿了么商家、商品的名称</p></div>
             </div>
             <!-- 轮播图 -->
-            
             <swiper :bannerData="bannerData"></swiper>
             <!-- 排序 -->
             <Fox></Fox>
@@ -93,22 +92,6 @@ export default {
             this.getAlllimit += this.limit
             console.log(this.getAlllimit)
         })
-   
-        
-
-        // getAddressLocation().then(result => {
-        // //   console.log(result, "本地地址");
-        // });
-        // getAttributeLocation().then(result => {
-        // console.log(result, "小属性");
-        // });
-        // getSortList().then(result => {
-        // console.log(result, "排序");
-        // });
-        // getSaleList().then(result => {
-        // //   console.log(result, "美食");
-
-        // });
     }
 }
 </script>

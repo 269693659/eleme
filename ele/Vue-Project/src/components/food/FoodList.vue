@@ -1,7 +1,7 @@
 <template>
     <div class="foodList">
         <ul class="listItem">
-            <li v-for="(item,index) in foodListData" :key="index">{{item.name}}</li>
+            <li v-for="(item,index) in foodListData" :key="index" :class="{active:type==item.name}" @click="showItem(item.name)">{{item.name}}</li>
         </ul>
         <div class="right" @click="showCategory()">></div>
         <div class="category" v-show="isShow">
@@ -10,7 +10,7 @@
                 <button @click="cancelCategory()">X</button>
             </div>
             <ul class="categoryName">
-                <li v-for="(item,index) in categoryData" :key="index"  @click="showSubCategories(index)">
+                <li v-for="(item,index) in categoryData" :key="index" :class="{active:categoryType==item.name}" @click="showSubCategories(index,item.name)">
                     <span class="name">{{item.name}}</span>
                     <span class="count">{{item.count}}</span>
                 </li>
@@ -36,10 +36,15 @@ export default {
             categoryData:[],
             subCategoriesData:[],
             isShow:false,
-            shade:false
+            shade:false,
+            type:'全部',
+            categoryType:'美食'
         }
     },
     methods:{
+        showItem(name){
+            this.type=name;
+        },
         showCategory(){
             this.shade=true;
             this.isShow=true;
@@ -51,7 +56,8 @@ export default {
             this.isShow=false;
             this.cancelShade();
         },
-        showSubCategories(index){
+        showSubCategories(index,name){
+            this.categoryType=name;
             this.subCategoriesData=[];
             this.subCategoriesData=this.categoryData[index].sub_categories;
         }
@@ -79,14 +85,19 @@ export default {
     padding: 0 16px;
     overflow-x: scroll;
     white-space: nowrap;
+    height: 40px;
 }
 .foodList .listItem li{
     display: inline-block;
     text-align: center;
     margin-right: 30px;
-    height: 40px;
     line-height: 40px;
     opacity: 0.7;
+    height: 32px;
+}
+.foodList .listItem li.active{
+    opacity: 1;
+    border-bottom: 2px solid #fff;
 }
 .foodList .right{
     position: absolute;
@@ -139,6 +150,13 @@ ul li span{
     padding-left: 18px;
     width: 70px;
 }
+.categoryName li.active .name{
+    color: #2395ff;
+    font-weight: 900;
+}
+.categoryName li.active .count{
+    color: #2395ff;
+}
 ul li .count{
     color: #999;
     font-size: 12px;
@@ -156,6 +174,7 @@ ul li .count{
     height: 50px;
     line-height: 50px;
     color: #333;
+    vertical-align: middle;
 }
 .categoryItem{
     width: 60%;

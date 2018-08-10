@@ -11,7 +11,6 @@ longitude=114.11768
 entry_id=20004689
 terminal=h5
 */
-
 export function getFoodPageFoodListData(){
 
     return new Promise((resolve,reject)=>{
@@ -25,8 +24,6 @@ export function getFoodPageFoodListData(){
                 terminal:'h5'
             }
         }).then(response=>{
-            //console.log('请求成功');
-            //console.log(response.data);
             resolve(response.data)
         }).catch(error=>{
             console.log(error);
@@ -58,9 +55,53 @@ export function getFoodPageCategoryData(){
                         str=value.image_url.split('');
                         str.splice(1,0,'/');
                         str.splice(4,0,'/');
-                        value.image_url="//fuss10.elemecdn.com/"+str.join('')+".png?imageMogr/format/webp/thumbnail/!80x80r/gravity/Center/crop/80x80/";
+                        if(str.length===37){
+                            value.image_url="//fuss10.elemecdn.com/"+str.join('')+".png?imageMogr/format/webp/thumbnail/!80x80r/gravity/Center/crop/80x80/";
+                        }else{
+                            value.image_url="//fuss10.elemecdn.com/"+str.join('')+".jpeg?imageMogr/format/webp/thumbnail/!80x80r/gravity/Center/crop/80x80/";
+                        }
                     })
                 }              
+            })
+            resolve(data);
+        }).catch(error=>{
+            console.log(error);
+        })
+    })
+}
+/*sale_list销售列表
+type=quality_meal
+latitude=22.53199
+longitude=114.11768
+*/
+//https://h5.ele.me/restapi/shopping/v1/sale_list_index?type=quality_meal&latitude=22.533719&longitude=113.936091
+export function getSaleListData(){
+    return new Promise((resolve,reject)=>{
+        axios.get(API.SALE_LIST_API,{
+            params:{
+                type:'quality_meal',
+                latitude:22.533719,
+                longitude:113.936091
+            }
+        }).then(response=>{
+            let data=[];
+            let str=[];
+            response.data.query_list.map((item,index)=>{
+                if(index<3){
+                    item.foods.map((value,index)=>{
+                        if(index==0){
+                            str=value.image_path.split('');
+                            str.splice(1,0,'/');
+                            str.splice(4,0,'/');
+                            if(str.length==37){
+                                value.image_path="//fuss10.elemecdn.com/"+str.join('')+".png?imageMogr/format/webp/thumbnail/!220x220r/gravity/Center/crop/220x220/";
+                            }else{
+                                value.image_path="//fuss10.elemecdn.com/"+str.join('')+".jpeg?imageMogr/format/webp/thumbnail/!220x220r/gravity/Center/crop/220x220/";
+                            }
+                            data.push(value);
+                        }
+                    })
+                }
             })
             resolve(data);
         }).catch(error=>{
