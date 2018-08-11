@@ -1,7 +1,5 @@
 <template>
-    <page id="indent">
-        <div>订单</div>
-    </page>
+    <h1>SaleStop</h1>
 </template>
 
 <script>
@@ -13,3 +11,4 @@ export default {
 <style>
 
 </style>
+

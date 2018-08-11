@@ -1,11 +1,11 @@
 <template>
-    <!-- <page id="discover"> -->
+    <page id="discover">
         <div class="discover">
             <img src="https://fuss10.elemecdn.com/2/9f/cedf0f9959a7e699f81dba18d0aa6gif.gif" class="top-banner">
             <div class="coverHead">
                 
-                <div class="coverLeft">
-                    <router-link to="/goldstop/1/2">
+                <div class="coverLeft" @click = "goGold()">
+                    <!-- <router-link to="/goldstop"> -->
                     <div class="megs">
                         <p>金币商城</p>
                         <span>
@@ -13,10 +13,10 @@
                         </span>
                         <img class="icon" src="https://fuss10.elemecdn.com/8/38/9c9aea0e856149083d84af3444b78jpeg.jpeg?imageMogr/format/webp/">
                     </div>
-                     </router-link>
+                     <!-- </router-link> -->
                 </div>
                
-                <div class="coverRight">
+                <div class="coverRight" @click="reCommend()">
                     <div class="coverRightTop">
                        <p class="one">推荐有奖</p>
                        <p>五元现金领不停</p>
@@ -61,25 +61,36 @@
                 </div>
             </div>
         </div>
-    <!-- </page> -->
+    </page>
 </template>
 
 <script>
 import {getSortList} from '@/services/indexserver'
 export default {
+    methods:{
+        goGold(){
+            this.$router.push({
+                path:'/goldstop/1'
+            })
+        },
+        reCommend(){
+            this.$router.push({
+                path:'/goldstop/2'
+            })
+        },
+         goMorePage(){
+                this.$router.push({
+                    path:'/more'
+                })
+        },
+    },
     counted(){
          getSortList().then(result=>{
             console.log(result,"美食")
         })
     },
-    // 
-    methods:{
-        goMorePage(){
-                this.$router.push({
-                    path:'/more'
-                })
-        }
-    },
+    
+
 }
 
     

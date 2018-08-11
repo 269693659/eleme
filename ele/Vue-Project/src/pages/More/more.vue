@@ -81,12 +81,14 @@ export default {
     mounted(){
         //创建swiper对象
         this.bannerSwiper = new Swiper(this.$refs.banner, {
+        autoplay:5000,     
         loop: true,
         pagination: '.swiper-pagination',
         });
     },
     updated(){
-        //data数据发生变化，dom会进行更新
+      
+      //data数据发生变化，dom会进行更新
         //如果slide个数发生变化，就需要更新轮播图
         this.bannerSwiper.update();
         this.bannerSwiper.reLoop();
