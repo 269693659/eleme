@@ -10,6 +10,7 @@ import Gold from '@/components/discover/Gold.vue'
 import Coment from '@/components/discover/Commend.vue'
 import Search from '@/pages/search/Search.vue'
 import Food from '@/pages/food/Food.vue'
+import More from '@/pages/more/More.vue'
 import Ranking from '@/pages/ranking/Index.vue'
 import Sale from '@/pages/home/Sale.vue'
 export default new Router({
@@ -63,6 +64,11 @@ export default new Router({
       path:'/ranking',
       name:'ranking',
       component:Ranking
+    },
+    {
+      path:'/more',
+      name:'more',
+      component:More
     },
     {
       path:"**",
