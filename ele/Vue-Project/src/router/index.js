@@ -11,6 +11,7 @@ import Coment from '@/components/discover/Commend.vue'
 import Search from '@/pages/search/Search.vue'
 import Food from '@/pages/food/Food.vue'
 import More from '@/pages/more/More.vue'
+import Ranking from '@/pages/ranking/Index.vue'
 import Sale from '@/pages/home/Sale.vue'
 export default new Router({
   routes: [
@@ -19,19 +20,12 @@ export default new Router({
       name: 'home',
       alias: '/',
       component: Home,
-      children:[
-        {
-          path: 'sale',
-          name: 'sale',
-          component: Sale,
-        }
-      ]
     },
-    // {
-    //   path:'/sale',
-    //   name:'sale',
-    //   component:Sale,
-    // },
+    {
+      path:'/sale',
+      name:'sale',
+      component:Sale,
+    },
     {
       path:'/discover',
       name:'discover',
@@ -66,6 +60,10 @@ export default new Router({
       path:'/food',
       name:'food',
       component:Food
+    },{
+      path:'/ranking',
+      name:'ranking',
+      component:Ranking
     },
     {
       path:'/more',

@@ -129,6 +129,7 @@ longitude=114.11768
 */
 //https://h5.ele.me/restapi/shopping/v2/restaurant/category?latitude=22.533719&longitude=113.936091
 const FOODPAGE_CATEGORY_API='/restapi/shopping/v2/restaurant/category'
+
 export default {
     RESTAURANT_LOCATION_API,
     ATTRIBUTE_SMALL_API,

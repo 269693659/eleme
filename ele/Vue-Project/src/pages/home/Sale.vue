@@ -2,7 +2,7 @@
     <page class="page" style="top:0;bottom:0;z-index:20">
          <div class="main">
             
-            <SaleStop></SaleStop>
+            <SaleStop v-for="(val,i) in saleData" :key="i" :item="val"></SaleStop>
             
         </div>   
     </page>
@@ -15,16 +15,20 @@ export default {
     components:{
         SaleStop,
     },
+    data(){
+        return{
+           saleData:[] 
+        }
+    },
     mounted(){
-        getSalePageCategoryData()
+        getSalePageCategoryData().then((item)=>{
+            this.saleData = item;
+            console.log(item)
+        })
     }
 }
 </script>
 
 <style scoped>
-.main{
-    width: 100%;
-    height: 800px;
-    background: #fff;
-}
+
 </style>
