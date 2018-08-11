@@ -16,9 +16,10 @@ export default {
   components: {
     AppHeader,
     AppNav,
-
   },
- 
+  errorCaptured(error){
+    console.log(error);
+  }
 };
 </script>
 

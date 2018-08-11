@@ -38,11 +38,9 @@ latitude=22.53199
 longitude=114.11768
 */
 //https://h5.ele.me/restapi/shopping/v2/restaurant/category?latitude=22.533719&longitude=113.936091
-
-
 export function getFoodPageCategoryData(){
     return new Promise((resolve,reject)=>{
-        axios.get(API.FOODS_LIST_API,{
+        axios.get(API.FOODPAGE_CATEGORY_API,{
             params:{
                 latitude:22.533719,
                 longitude:113.936091
@@ -52,7 +50,6 @@ export function getFoodPageCategoryData(){
             let str=[];
             response.data.map((item,index)=>{
                 if(index>0){
-                    data.push(item);
                     item.sub_categories.map(value=>{
                         str=value.image_url.split('');
                         str.splice(1,0,'/');
@@ -62,10 +59,11 @@ export function getFoodPageCategoryData(){
                         }else{
                             value.image_url="//fuss10.elemecdn.com/"+str.join('')+".jpeg?imageMogr/format/webp/thumbnail/!80x80r/gravity/Center/crop/80x80/";
                         }
-                    })
-                }              
+                    }) 
+                    data.push(item)
+                }             
             })
-            resolve(data);
+            resolve(data)
         }).catch(error=>{
             console.log(error);
         })
