@@ -57,6 +57,17 @@ textarea {
 table {
     border-collapse: collapse
 }
+.textell{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width:100%;
+  }
+.flex{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:nowrap;
+  }
 .clearfix:after {
     content: ".";
     display: block;

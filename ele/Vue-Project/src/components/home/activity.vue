@@ -47,7 +47,7 @@ export default {
 .trait{
   width: 175px;
   height: 140px;
-  background: #cccccc;
+  background: #fafafa;
   float: left;
   padding:9px 0 0 13px;
   box-sizing: border-box;

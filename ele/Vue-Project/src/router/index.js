@@ -6,12 +6,13 @@ Vue.use(Router)
 import Discover from '@/pages/discover/Index.vue'
 import Indent from '@/pages/indent/Index.vue'
 import Mine from '@/pages/mine/Index.vue'
-import Gold from '@/components/discover/Gold.vue'
-import Coment from '@/components/discover/Commend.vue'
 import Search from '@/pages/search/Search.vue'
 import Food from '@/pages/food/Food.vue'
 import More from '@/pages/more/More.vue'
 import Ranking from '@/pages/ranking/Index.vue'
+import Gold from '@/components/discover/Gold.vue'
+import Coment from '@/components/discover/Commend.vue'
+import Godetail from '@/components/home/godetail.vue'
 import Sale from '@/pages/home/Sale.vue'
 export default new Router({
   routes: [
@@ -40,6 +41,11 @@ export default new Router({
       path:"/goldstop/2",
       name:"Coment",
       component:Coment
+    },
+    { 
+      path:"/godetail/1",
+      name:"Godetail",
+      component:Godetail
     },
     {
       path:'/indent',
