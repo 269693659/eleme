@@ -3,7 +3,7 @@
         <div class="pic">
             <img :src="data.image_path">
         </div>
-        <div class="text">
+        <div class="text" @click="Godetile()">
             <h3 class="title">
                 <i v-if="data.is_premium">品牌</i>
                 <span>{{data.name}}</span>
@@ -107,6 +107,11 @@ export default {
                 this.isShow  = false
                 this.$refs.in.className = '';
             }
+        },
+           Godetile(){
+             this.$router.push({
+                path:'/godetail/1'
+            })
         }
     }
 }

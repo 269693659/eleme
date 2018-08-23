@@ -4,14 +4,14 @@
                 <div class="index-3xB2N_0">
                     <router-link class="trait" to="/sale">
                         <h3 class="package">品质套餐</h3>
-                        <div class="index-2W67h_0">搭配齐全吃得好</div>
-                        <div class="index-1DFa7_0">立即抢购 &gt;</div>
+                        <div class="alEAT">搭配齐全吃得好</div>
+                        <div class="buyNow">立即抢购 &gt;</div>
                         <img src="//fuss10.elemecdn.com/d/d4/16ff085900d62b8d60fa7e9c6b65dpng.png?imageMogr/format/webp/thumbnail/!240x160r/gravity/Center/crop/240x160/">
                     </router-link>
                     <div class="index-3OXhZ_0 trait">
-                        <h3 class="package">限量抢购</h3>
-                        <div class="index-2W67h_0">超值美味 9.9元起</div>
-                        <div class="index-1DFa7_0"><span>4304人</span>正在抢 &gt;</div>
+                        <h3 class="packagetwo">限量抢购</h3>
+                        <div class="alEAT">超值美味 9.9元起</div>
+                        <div class="buyNow goBuy"><span>4304人</span>正在抢 &gt;</div>
                         <img src="//fuss10.elemecdn.com/b/e1/0fa0ed514c093a7138b0b9a50d61fpng.png?imageMogr/format/webp/thumbnail/!240x160r/gravity/Center/crop/240x160/">
                     </div>
                 </div> 
@@ -33,23 +33,57 @@ export default {
 .acts{
     padding-top:4px;
 }
-.index-1y1Q5_0 img{
+.trait{
+    position: relative;
+}
+.trait img{
     width:120px;
     height:80px;
     float:right;
+    position: absolute;
+    bottom:-8px;
+    right:0;
 }
 .trait{
-  width: 170px;
-  height: 130px;
-  background: #f4f4f4;
+  width: 175px;
+  height: 140px;
+  background: #fafafa;
   float: left;
-  padding-left:5px;
+  padding:9px 0 0 13px;
   box-sizing: border-box;
-  margin-left: 10px;
+  margin-left: 8px;
 }
-.package,
-.index-1DFa7_0 {
-  color: red;
+.package,.packagetwo{
+    font-size: .18rem;
+    font-weight: 700;
+    color:#000;
 }
-
+.packagetwo{
+    color:#e81919;
+}
+.buyNow,.goBuy{
+    color: #af8260;
+    font-weight: 700;
+    font-size: 0.11rem;
+}
+.goBuy{
+    color:#000;
+}
+.goBuy span{
+    color:#e81919;
+}
+.alEAT{
+    font-size:.12rem;
+    line-height: 0.22rem;
+    color: #777;
+}
+.shop{
+    padding-top:15px;
+}
+.shop::after{
+    height:1px;
+}
+.shop::before{
+     height:1px;
+}
 </style>

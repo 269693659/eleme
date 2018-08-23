@@ -77,21 +77,20 @@ export default {
             this.$router.push({
                 path:'/goldstop/2'
             })
-        }
+        },
+         goMorePage(){
+                this.$router.push({
+                    path:'/more'
+                })
+        },
     },
     counted(){
          getSortList().then(result=>{
             console.log(result,"美食")
         })
     },
-    // 
-    methods:{
-        goMorePage(){
-                this.$router.push({
-                    path:'/more'
-                })
-        }
-    },
+    
+
 }
 
     

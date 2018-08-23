@@ -111,6 +111,17 @@ longitude=114.11768
 */
 const HOT_SEARCH_API="/restapi/shopping/v3/hot_search_words"
 /*
+请求搜索框的数据：
+接口功能：搜索页面搜索框的数据请求
+接口参数：
+kw: 奶
+latitude: 22.533719
+longitude: 113.936091
+city_id: 11
+https://h5.ele.me/restapi/shopping/v1/typeahead?kw=%E5%A5%B6&latitude=22.533719&longitude=113.936091&city_id=11
+*/
+const SEARCH_TYPEAHEAD_API='/restapi/shopping/v1/typeahead'
+/*
 请求food页面的foodlist的数据：
 接口功能：food页面的foodlist数据请求
 接口参数：
@@ -129,6 +140,13 @@ longitude=114.11768
 */
 //https://h5.ele.me/restapi/shopping/v2/restaurant/category?latitude=22.533719&longitude=113.936091
 const FOODPAGE_CATEGORY_API='/restapi/shopping/v2/restaurant/category'
+
+/*
+请求店铺详情页面(无效的)
+https://h5.ele.me/restapi/booking/v1/cart_client
+https://h5.ele.me/restapi/booking/v1/cart_client
+ */
+const DETAILS_STORE_API = '/restapi/booking/v1/cart_client'
 export default {
     RESTAURANT_LOCATION_API,
     ATTRIBUTE_SMALL_API,
@@ -139,6 +157,7 @@ export default {
     SALE_LIST_API,
     HOME_BANNER_API,
     HOT_SEARCH_API,
+    SEARCH_TYPEAHEAD_API,
     FOODPAGE_FOODLIST_API,
     FOODPAGE_CATEGORY_API
 }

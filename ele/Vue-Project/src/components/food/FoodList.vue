@@ -1,7 +1,7 @@
 <template>
     <div class="foodList">
         <ul class="listItem">
-            <li v-for="(item,index) in foodListData" :key="index">{{item.name}}</li>
+            <li v-for="(item,index) in foodListData" :key="index" :class="{active:type==item.name}" @click="showItem(item.name)">{{item.name}}</li>
         </ul>
         <div class="right" @click="showCategory()">></div>
         <div class="category" v-show="isShow">
@@ -9,8 +9,9 @@
                 <h3>请选择分类</h3>
                 <button @click="cancelCategory()">X</button>
             </div>
-            <ul class="categoryName">
-                <li v-for="(item,index) in categoryData" :key="index"  @click="showSubCategories(index)">
+            <div class="category-content">
+                <ul class="categoryName">
+                <li v-for="(item,index) in categoryData" :key="index" :class="{active:categoryType==item.name}" @click="showSubCategories(index,item.name)">
                     <span class="name">{{item.name}}</span>
                     <span class="count">{{item.count}}</span>
                 </li>
@@ -22,6 +23,7 @@
                     <span class="count">{{item.count}}</span>
                 </li>
             </ul>
+            </div>
         </div>
         <div class="shade" @click="cancelShade()" v-show="shade"></div>
     </div>
@@ -36,10 +38,15 @@ export default {
             categoryData:[],
             subCategoriesData:[],
             isShow:false,
-            shade:false
+            shade:false,
+            type:'全部',
+            categoryType:'美食'
         }
     },
     methods:{
+        showItem(name){
+            this.type=name;
+        },
         showCategory(){
             this.shade=true;
             this.isShow=true;
@@ -51,7 +58,8 @@ export default {
             this.isShow=false;
             this.cancelShade();
         },
-        showSubCategories(index){
+        showSubCategories(index,name){
+            this.categoryType=name;
             this.subCategoriesData=[];
             this.subCategoriesData=this.categoryData[index].sub_categories;
         }
@@ -61,6 +69,7 @@ export default {
             this.foodListData=result;
         }),
         getFoodPageCategoryData().then(result=>{
+            console.log(result)
             this.categoryData=result;
             this.subCategoriesData=this.categoryData[0].sub_categories;
         })
@@ -72,25 +81,29 @@ export default {
 .foodList{
     width: 100%;
     color: white;
-    position: relative;
 }
 .foodList .listItem{
     background: #0085ff;
     padding: 0 16px;
     overflow-x: scroll;
     white-space: nowrap;
+    height: 40px;
 }
 .foodList .listItem li{
     display: inline-block;
     text-align: center;
     margin-right: 30px;
-    height: 40px;
     line-height: 40px;
     opacity: 0.7;
+    height: 32px;
+}
+.foodList .listItem li.active{
+    opacity: 1;
+    border-bottom: 2px solid #fff;
 }
 .foodList .right{
     position: absolute;
-    top: 0;
+    top: 44px;
     right: 0;
     width: 40px;
     background: #0085ff;
@@ -139,6 +152,13 @@ ul li span{
     padding-left: 18px;
     width: 70px;
 }
+.categoryName li.active .name{
+    color: #2395ff;
+    font-weight: 900;
+}
+.categoryName li.active .count{
+    color: #2395ff;
+}
 ul li .count{
     color: #999;
     font-size: 12px;
@@ -146,24 +166,31 @@ ul li .count{
 .categoryItem li .name{
     width: 120px;
 }
+.category-content{
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 100%;
+}
 .category ul{
-    height: 400px;
+    height: 356px;
     display: inline-block;
     overflow-y: scroll;
     white-space: nowrap;
 }
 .category ul li{
-    height: 50px;
-    line-height: 50px;
+    height: 44px;
+    line-height: 44px;
     color: #333;
+    vertical-align: middle;
 }
 .categoryItem{
     width: 60%;
     padding-left: 10px;
 }
 .categoryItem li img{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
     vertical-align: middle;
 }
@@ -172,12 +199,12 @@ ul li .count{
 }
 .shade{
     width: 100%;
-    height: 620px;
+    height: 666px;
     background: #000;
     opacity: 0.2;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 18;
+    z-index: 12;
 }
 </style>

@@ -6,12 +6,19 @@ Vue.use(Router)
 import Discover from '@/pages/discover/Index.vue'
 import Indent from '@/pages/indent/Index.vue'
 import Mine from '@/pages/mine/Index.vue'
-import Gold from '@/components/discover/Gold.vue'
-import Coment from '@/components/discover/Commend.vue'
 import Search from '@/pages/search/Search.vue'
 import Food from '@/pages/food/Food.vue'
+<<<<<<< HEAD
 import Sale from '@/pages/home/Sale.vue'
 import More from '@/pages/more/More.vue'
+=======
+import More from '@/pages/more/More.vue'
+import Ranking from '@/pages/ranking/Index.vue'
+import Gold from '@/components/discover/Gold.vue'
+import Coment from '@/components/discover/Commend.vue'
+import Godetail from '@/components/home/godetail.vue'
+import Sale from '@/pages/home/Sale.vue'
+>>>>>>> 04ac7661f39db4bc6c465c082abf6256467e93c3
 export default new Router({
   routes: [
     {
@@ -40,6 +47,11 @@ export default new Router({
       name:"Coment",
       component:Coment
     },
+    { 
+      path:"/godetail/1",
+      name:"Godetail",
+      component:Godetail
+    },
     {
       path:'/indent',
       name:'indent',
@@ -59,6 +71,10 @@ export default new Router({
       path:'/food',
       name:'food',
       component:Food
+    },{
+      path:'/ranking',
+      name:'ranking',
+      component:Ranking
     },
     {
       path:'/more',
@@ -68,7 +84,10 @@ export default new Router({
     {
       path:"**",
       redirect:'/home'//重定向
+<<<<<<< HEAD
       
+=======
+>>>>>>> 04ac7661f39db4bc6c465c082abf6256467e93c3
     }
   ]
 

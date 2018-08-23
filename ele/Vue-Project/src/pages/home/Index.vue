@@ -17,7 +17,6 @@
 
             
             <!-- 轮播图 -->
-            
             <swiper :bannerData="bannerData"></swiper>
             <!-- 排序 -->
             <ACTIVE></ACTIVE>
@@ -136,22 +135,6 @@ export default {
             this.getAlllimit += this.limit
             console.log(this.getAlllimit)
         })
-   
-        
-
-        // getAddressLocation().then(result => {
-        // //   console.log(result, "本地地址");
-        // });
-        // getAttributeLocation().then(result => {
-        // console.log(result, "小属性");
-        // });
-        // getSortList().then(result => {
-        // console.log(result, "排序");
-        // });
-        // getSaleList().then(result => {
-        // //   console.log(result, "美食");
-
-        // });
     }
 }
 </script>

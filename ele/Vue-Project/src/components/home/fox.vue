@@ -219,6 +219,10 @@ export default {
   height: 80px;
   float: right;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 04ac7661f39db4bc6c465c082abf6256467e93c3
 .shop {
   display: flex;
   width: 100%;

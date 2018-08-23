@@ -1,20 +1,19 @@
 <template>
     <div class="food">
-        <app-header></app-header>
         <food-list></food-list>
+        <worry-package></worry-package>
     </div>
 
 </template>
 
 <script>
-import AppHeader from '@/components/common/AppHeader.vue'
 import FoodList from '@/components/food/FoodList.vue'
-
+import WorryPackage from '@/components/food/WorryPackage.vue'
 
 export default {
     components:{
-        AppHeader,
         FoodList,
+        WorryPackage,
     },
     mounted(){
         
