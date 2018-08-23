@@ -11,6 +11,7 @@ import Coment from '@/components/discover/Commend.vue'
 import Search from '@/pages/search/Search.vue'
 import Food from '@/pages/food/Food.vue'
 import Sale from '@/pages/home/Sale.vue'
+import More from '@/pages/more/More.vue'
 export default new Router({
   routes: [
     {
@@ -60,8 +61,14 @@ export default new Router({
       component:Food
     },
     {
+      path:'/more',
+      name:'more',
+      component:More
+    },
+    {
       path:"**",
       redirect:'/home'//重定向
+      
     }
   ]
 

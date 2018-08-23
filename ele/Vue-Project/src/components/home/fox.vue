@@ -195,7 +195,30 @@ export default {
   background: skyblue;
   margin-right: 20px;
 }
-
+.index-1y1Q5_0 {
+  padding-top: 20px;
+}
+.index-1y1Q5_0 img {
+  width: 120px;
+  height: 80px;
+  float: right;
+}
+.index-Q3GS5_0 {
+  width: 170px;
+  height: 130px;
+  background: #f4f4f4;
+  float: left;
+  margin-left: 10px;
+}
+.package,
+.index-1DFa7_0 {
+  color: red;
+}
+.index-1y1Q5_0 img {
+  width: 120px;
+  height: 80px;
+  float: right;
+}
 .shop {
   display: flex;
   width: 100%;

@@ -57,7 +57,7 @@
                     </li>
                 </ul>
                 <div class="more">
-                    <p>查看更多</p>
+                    <p @click="goMorePage()">查看更多</p>
                 </div>
             </div>
         </div>
@@ -83,8 +83,18 @@ export default {
          getSortList().then(result=>{
             console.log(result,"美食")
         })
-    }
+    },
+    // 
+    methods:{
+        goMorePage(){
+                this.$router.push({
+                    path:'/more'
+                })
+        }
+    },
 }
+
+    
 </script>
 
 <style scoped>
@@ -221,6 +231,6 @@ export default {
     .more p{
         margin-top:-98px;
         margin-left:156px;
-        color:red;
+        color:#999;
     }
 </style>
